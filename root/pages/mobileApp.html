@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile App</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://kit.fontawesome.com/5894beddfb.js" crossorigin="anonymous"></script>
+    <style>
+         .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 900,
+          'GRAD' 0,
+          'opsz' 24
+}
+        
+body {
+    background-color: #F7F6ED;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+img:not(.logo) {
+    max-width: 100%;
+    height: auto;
+}
+/* header styles */
+.c-header {
+    display: flex;
+    position: relative;
+    z-index: 100;
+    width: 100%;
+}
+
+.c-header > * {
+    padding: 10px;
+}
+.c-header img {
+    margin: 0 auto;
+}
+.c-header-nav {
+    position: absolute;
+    top:100%;
+    width: 100%;
+    display: none;
+    background: #F7F6ED;
+}
+
+
+.c-header-nav li {
+    padding: 1rem;
+}
+
+.c-header-nav li a {
+    display: block;
+}
+.c-header-nav li a:hover {
+    color: purple;
+}
+
+.nt:checked ~ nav {display: block;}
+.nt {
+    display: none;
+}
+#menuClose {display: none;}
+.nt:checked ~ .ntMenu #menuClose {
+    display: block;
+}
+.nt:checked ~ .ntMenu #menuClose {
+    display: block;
+}
+.nt:checked ~ .ntMenu .menuOpen {
+    display: none;
+}
+input[type="search"] {
+    display: none;
+
+} 
+@media screen and (min-width: 550px) {
+    
+    label:not(.ntMenu), input[type="text"] {
+        display: inline-block;
+        width:50%;}   
+}
+@media screen and (min-width: 800px) {
+    /* header styles */
+    .ntMenu {
+        display: none;
+    }
+    .c-header-nav {
+        all:unset;
+        display: flex;
+    }
+    .c-header-nav ul {
+        display: flex;
+        align-items: center;
+    }
+    input[type="search"] {
+        display: block;
+        margin-left:auto;
+        margin-right: 5px;
+        width: 50%;
+        align-self:center;
+    }
+}
+    </style>
+</head>
+<body>
+    <header class=c-header>
+        <img class="logo" src="../images/small-logo.png" alt="logo">
+        <input type="checkbox" class="nt" id="nt">
+        <nav class="c-header-nav">
+            <ul>
+                <li><a href="#"> Home</a></li>
+                <li><a href="#"> Explore</a></li>
+                <li><a href="#"> Plan</a></li>
+                <li><a href="#"> Share</a></li>
+                <li><a href="#"> About us</a></li>
+            </ul>
+        </nav>
+        <label for="nt" class="ntMenu" name="nt">
+            <span class="material-symbols-outlined mi menuOpen">menu</span>
+            <span class="material-symbols-outlined mi menuClose" id="menuClose">close</span>
+        </label>
+        <input type="search">
+    </header>
+    
+</body>
+</html>
