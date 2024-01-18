@@ -79,12 +79,32 @@ input[type="search"] {
 
 } 
 /* general styles */
+
 .stylized-font {
     font-size: 1.2em;
     font-weight: bold;
     text-align: center;
     text-shadow:  -1.5px 0 0 red;
+    margin-bottom: 15px;
 }
+/* main section styles  */ 
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.subheader {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.manage-account-section p {
+    text-align: left;
+    margin-bottom: 15px;
+    width: 300px;
+}
+
 /* footer styles */
 .c-manage-footer nav, .c-manage-footer p{
     display: flex;
@@ -143,16 +163,17 @@ input[type="search"] {
         </label>
         <input type="search">
     </header>
-    <main>
+    <main class="flex-container">
         <section>
             <h2 class="stylized-font">for iPhone and iPad: Roadside America</h2>
     
-            <figure>
-                <img src="" alt="Description of Image 1">
-                <img src="" alt="Description of Image 2">
+            <figure class="flex-container">
+                <img src="../images/mobile-app-scan-promo-small.JPG" alt="Description of Image 1">
+                <img src="../images/mobile-app-promo.jpg" alt="Description of Image 2">
             </figure>
-        <section>
-            <h3>About our App</h3>
+        </section>
+        <section class="manage-account-section">
+            <h3 class="subheader">About our App</h3>
     
             <p>Our handy and amusing road trip tool guides you to the crazy places you've read about here, and also gives access to the "research" targets of potentially great places to explore.</p>
             <p>Maps, directions, photos, stories and tips. Find and filter recommendations between two points. Save places to share and view on your compatible iPhone and iPad.  </p>
@@ -163,7 +184,7 @@ input[type="search"] {
                 <a href="#"></s><img class="img-pr-2" src="../images/google_play_small.png" alt="google store"></a>
             </figure>
         </section>
-        </section>
+
     </main>
     <footer class="c-manage-footer">
         <nav>
