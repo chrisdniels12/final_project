@@ -78,13 +78,30 @@ input[type="search"] {
     display: none;
 
 } 
+/* general styles */
+.stylized-font {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    text-shadow:  -1.5px 0 0 red;
+}
+/* footer styles */
+.c-manage-footer nav, .c-manage-footer p{
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+.c-manage-footer nav ul {
+    display: flex;
+    gap: 20px;
+}
 @media screen and (min-width: 550px) {
     
     label:not(.ntMenu), input[type="text"] {
         display: inline-block;
         width:50%;}   
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1200px) {
     /* header styles */
     .ntMenu {
         display: none;
@@ -126,6 +143,45 @@ input[type="search"] {
         </label>
         <input type="search">
     </header>
+    <main>
+        <section>
+            <h2 class="stylized-font">for iPhone and iPad: Roadside America</h2>
+    
+            <figure>
+                <img src="" alt="Description of Image 1">
+                <img src="" alt="Description of Image 2">
+            </figure>
+        <section>
+            <h3>About our App</h3>
+    
+            <p>Our handy and amusing road trip tool guides you to the crazy places you've read about here, and also gives access to the "research" targets of potentially great places to explore.</p>
+            <p>Maps, directions, photos, stories and tips. Find and filter recommendations between two points. Save places to share and view on your compatible iPhone and iPad.  </p>
+            <p>Requires iOS 12.3 and higher. Basic full feature app: $2.99 for 1 region of 7; optional in-app purchase: $6.99 more for all remaining regions, or $1.99/ea.region a la carte.</p>
+            <p><a href="#">Learn more</a></p>
+            <figure>
+                <a href="#"><img class="img-pr-1" src="../images/appe_store_small.png" alt="apple store"></a>
+                <a href="#"></s><img class="img-pr-2" src="../images/google_play_small.png" alt="google store"></a>
+            </figure>
+        </section>
+        </section>
+    </main>
+    <footer class="c-manage-footer">
+        <nav>
+             <ul>
+                 <li><a href="#"> Home</a></li>
+                 <li><a href="#"> About us</a></li>
+                 <li><a href="#">contact</a></li>
+             </ul>
+         </nav>
+         <nav>
+             <ul>
+                 <li><a href="#"><i class="fa-brands fa-square-x-twitter fa-2x"></i></a></li>
+                 <li><a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a></li>
+                 <li><a href="#"> <i class="fa-brands fa-square-facebook fa-2x"></i></a></li>
+             </ul>
+         </nav>
+         <p>&copy; 2024 Roadside America</p>
+     </footer>
     
 </body>
 </html>
