@@ -1,10 +1,471 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
     
-</body>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Roadside America Homepage</title>
+        <link href="css/reset.css" rel="stylesheet" type="text/css">
+        <link href="css/base.css" rel="stylesheet" type="text/css">
+        <!--        font awsome-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        
+        <!--        google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=PT+Sans+Caption&display=swap" rel="stylesheet">
+        
+        <!--        jquery-->
+        <script src="https://kit.fontawesome.com/5894beddfb.js" crossorigin="anonymous"></script>
+        <style>
+            
+          .material-symbols-outlined {
+              font-variation-settings:
+              'FILL' 0,
+              'wght' 900,
+              'GRAD' 0,
+              'opsz' 24
+            }
+            
+    
+
+/* --------------------------- global --------------------------------------*/
+            body {
+                background-color: #f7f6ed;
+                font-family: "Montserrat", sans-serif;
+                font-size: 10px;
+                text-align: center;
+            }
+            
+            h1 {
+                font-size: 2.8rem;
+                font-family: "PT Sans Caption", sans-serif;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+                padding: 1.3rem;
+                text-shadow: 1px 1px 2px #f7081f;
+                border-top: solid 1.5px #000;
+                margin-top: 1rem;
+            }
+            
+        
+            p {
+                font-size: 1.3rem;
+                padding-bottom: 1rem;
+            }
+            
+            a {
+                font-size: 1.3rem;
+                text-decoration: none;
+                color: #000;
+            }
+            
+            a:hover {
+                color: #8a79cc;
+            }
+            
+            .large {
+                display: none;
+            }
+/* ----------------------------- header ------------------------------*/
+            img:not(.logo) {
+                max-width: 100%;
+                height: auto;
+            }
+            
+            .c-header {
+                display: flex;
+                position: relative;
+                z-index: 100;
+                width: 100%;
+            }
+
+            .c-header > * {
+                padding: 10px;
+            }
+            .c-header img {
+                margin: 0 auto;
+                width: 50%;
+            }
+            .c-header-nav {
+                position: absolute;
+                top:100%;
+                width: 100%;
+                display: none;
+                background: #F7F6ED;
+            }
+
+
+            .c-header-nav li {
+                padding: 1rem;
+                border-top: solid 2px #b5b4b4;
+                background-color: #fff;
+            }
+            
+            .c-header-nav li:last-child {
+                border-bottom: solid 2px #b5b4b4;
+            }
+
+            .c-header-nav li a {
+                display: block;
+                text-align: center;
+            }
+            
+            li.get-app {
+                display: none;
+            }
+            
+            .nt:checked ~ nav {display: block;}
+            .nt {
+                display: none;
+            }
+            #menuClose {display: none;}
+            .nt:checked ~ .ntMenu #menuClose {
+                display: block;
+            }
+            .nt:checked ~ .ntMenu #menuClose {
+                display: block;
+            }
+            .nt:checked ~ .ntMenu .menuOpen {
+                display: none;
+            }
+           
+            
+/*---------------------------------section.hero---------------------------------*/
+            
+            section.hero {
+                position: relative;
+                width: 100%;
+                text-align: center;
+            }
+            
+            section.hero h1{
+                color: #fff;
+                text-shadow: 1px 1px 2px rgba(0,0,0,.4);
+                width: 80%;
+                position: absolute;
+                top: 40%;
+                left: 10%;
+                text-align: center;
+            }
+            
+ /* ----------------------------- main ---------------------------------------*/
+            main {
+                width: 80%;
+                margin: auto;
+                padding: 3rem 0;
+            }
+/*--------------section.idea-search---------------*/
+            section.idea-search p {
+                font-size: 1.5rem;
+            }
+            section.idea-search input {
+                width: 90%;
+                padding: .4rem;
+                border-radius: 10px;
+                font-size: 1.3rem;
+                text-align: center;
+            }
+            
+/*------------------category---------------------*/   
+            section.attractions h2 {
+                border-top: none;
+                margin-top: 0;
+            }
+            
+            article.category {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1.5rem;
+            }
+            
+            article.category figure {
+                border: solid 1px #000;
+            }
+            article.category figcaption {
+                background-color: #fff;
+                padding: 1rem;
+            }
+            
+/*--------------sight of the week---------------*/  
+            article.site-week ul{
+                text-align: left;
+            }
+            
+            article.site-week li{
+                border-bottom: solid 1px #808080;
+                margin-bottom: .5rem;
+            }
+            
+             article.site-week li:last-child{
+                border-bottom: none;
+            }
+            
+            article.site-week p {
+                padding: .2rem 0;
+            }
+            article.site-week p:nth-child(odd){
+                color: #8a79cc;
+            }
+            
+             article.site-week p:nth-child(even){
+                color: #808080;
+                font-size: .8rem;
+            }
+/*--------------app download---------------*/  
+            aside h2 {
+                text-shadow: none;
+                font-size: 2rem;
+            }
+            
+            section.download-btn {
+                display: flex;
+                gap: 2rem;
+            }
+            
+/* ----------------------------- footer ---------------------------------------*/
+            footer {
+                background-color: #b5b4b4;
+                padding: 1rem;
+            }
+            
+            .c-manage-footer nav, .c-manage-footer p{
+                display: flex;
+                justify-content: center;
+                margin: 20px auto;
+            }
+            .c-manage-footer nav ul {
+                display: flex;
+                gap: 20px;
+            }
+            
+/* ----------------------------- media ---------------------------------------*/
+            @media screen and (min-width: 745px) {
+                .small {
+                    display: none;
+                }
+                
+                .large {
+                    display: block;
+                }
+                
+/*------------------header---------------------*/ 
+                header.c-header {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+            
+                }
+                
+                .c-header img {
+                    width: 40%;
+                    margin: 0;
+                }
+                
+                 .ntMenu {;
+                    display: none;
+                }
+                .c-header-nav {
+                    all:unset;
+                    display: flex;
+                    margin-right: 2rem;
+                }
+                .c-header-nav ul {
+                    display: flex;
+                    align-items: center;
+                }
+                
+                input[type="search"] {
+                    display: block;
+                    margin-left:auto;
+                    margin-right: 5px;
+                    width: 50%;
+                    align-self:center;
+                }
+                
+                .c-header-nav li {
+                    background-color: #f7f6ed;
+                    border: none;
+                    padding: 1rem;
+                }
+                
+                .c-header-nav li:last-child{
+                    border: none;
+                }
+            
+                li.get-app {
+                display: block;
+            }
+
+/*------------------category---------------------*/  
+                article.category {
+                    display: flex;
+        
+                }
+                
+                article.category img {
+                   
+                }
+                
+/*------------------articel, aside---------------------*/ 
+                section.wrapper {
+                    display: flex;
+                    gap: 0;
+                }
+                
+                article.site-week h2 {
+                    border-top: none;
+                }
+                
+                aside h2 {
+                    display: none;
+                }
+                aside img.large {
+                    padding-top: 2rem;
+                    width: 60%;
+                    margin: auto;
+                }
+                
+            }
+                
+            
+        </style>
+    </head>
+
+    <body>
+       
+       <header class=c-header>
+            <a href="index.html"><img class="logo small" src="images/logo_small.png" alt="logo"></a>
+            <a href="index.html"><img class="logo large" src="images/logo_large.png" alt="logo"></a>
+            <input type="checkbox" class="nt" id="nt">
+            <nav class="c-header-nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Explore</a></li>
+                    <li><a href="#">Plan</a></li>
+                    <li><a href="pages/share.html">Share</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li class="get-app"><a href="#"><span class="material-symbols-outlined">
+                    star</span>Get the App</a></li>
+                </ul>
+            </nav>
+            <label for="nt" class="ntMenu" name="nt">
+                <span class="material-symbols-outlined mi menuOpen">menu</span>
+                <span class="material-symbols-outlined mi menuClose" id="menuClose">close</span>
+            </label>
+        </header>
+
+            <section class="hero">
+                <img class="small" src="images/cover_small.jpg" alt="cover photo">
+                <img class="large" src="images/cover_large.jpg" alt="cover photo">
+                <h1>Find Unique Attractions for your next trip</h1>
+            </section>
+            
+            <main class="home-page">
+               
+                <section class="idea-search">
+                    <p>Bored with typical vacations? We have some ideas!</p>
+                    <input type="text" placeholder="Search state or city">
+                </section>
+
+                <section class="attractions">
+                    <h2>Find attractions by categories</h2>
+                    <article class="category">
+                        <figure>
+                            <img class="small" src="images/beach_small.jpg" alt="beach with blue sky">
+                            <img class="large" src="images/beach_large.jpg" alt="beach with blue sky">
+                            <figcaption><a href="#">Beach Vacations</a></figcaption>
+                        </figure>
+                        <figure>
+                            <img class="small" src="images/mountains_small.jpg" alt="mountains">
+                            <img class="large" src="images/mountains_large.jpg" alt="mountains">
+                            <figcaption><a href="#">Mountains</a></figcaption>
+                        </figure>
+                        <figure>
+                            <img class="small" src="images/roadtrip_small.jpg" alt="car in the road">
+                            <img class="large" src="images/roadtrip_large.jpg" alt="car in the road">
+                            <figcaption><a href="#">Road Trip</a></figcaption>
+                        </figure>
+                        <figure>
+                            <img class="small" src="images/event_small.jpg" alt="festival">
+                            <img class="large" src="images/event_large.jpg" alt="festival">
+                            <figcaption><a href="#">Event</a></figcaption>
+                        </figure>
+                        <figure>
+                            <img class="small" src="images/history_small.jpg" alt="mount rushmore">
+                            <img class="large" src="images/history_large.jpg" alt="mount rushmore">
+                            <figcaption><a href="#">Historical</a></figcaption>
+                        </figure>
+                        <figure>
+                            <img class="small" src="images/nature_small.jpg" alt="flower filed">
+                            <img class="large" src="images/nature_large.jpg" alt="flower filed">
+                            <figcaption><a href="#">Nature</a></figcaption>
+                        </figure>
+                    </article>
+                </section>
+                
+                <section class="wrapper">
+                    <article class="site-week">
+                        <h2>Sight of the Week</h2>
+                          <ul>
+                              <li>
+                                  <a href="#"><p>Memories of a Seventies Punk Rock Tourist</p></a>
+                                  <p>December 18, 2023</p>
+                              </li>
+                              <li>
+                                  <a href="#"><p>Is Taxidermy Dead?</p></a>
+                                  <p>October 28, 2023</p>
+                              </li>
+                              <li>
+                                  <a href="#"><p>Belated Burials: Expied, Unidentfied, and Famous!</p></a>
+                                  <p>October 4, 2023</p>
+                              </li>
+                              <li>
+                                  <a href="#"><p>Weed Museum for Atlantic city</p></a>
+                                  <p>April 29, 2023</p>
+                              </li>
+                              <li>
+                                  <a href="#"><p>wedding Bells for Cocaine Bear</p></a>
+                                  <p>March 18, 2023</p>
+                              </li>
+                          </ul>
+                    </article>
+
+                    <aside class="app-download">
+                       <h2>Go further with our app!</h2>
+                        <section class="download-btn">
+                            <a href="#"><img class="small" src="images/download_apple.png" alt="apple download button"></a>
+                            <a href="#"><img class="small" src="images/download_google.png" alt="google download button"></a>
+                            <a href="#"><img class="large" src="images/download_large.png" alt="google download button"></a>
+                        </section>
+                    </aside>
+                </section>
+                
+        </main>
+        
+        <footer class="c-manage-footer">
+            <nav>
+                <ul>
+                    <li><a href="index.html"> Home</a></li>
+                    <li><a href="#"> About us</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-square-x-twitter fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-square-facebook fa-2x"></i></a></li>
+                </ul>
+            </nav>
+            <p>&copy; 2024 Roadside America</p>
+        </footer>
+
+    </body>
 </html>
+
+
+
