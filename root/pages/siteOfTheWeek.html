@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobile App</title>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Site of the week</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -21,7 +22,31 @@ body {
     background-color: #F7F6ED;
     font-family: 'Helvetica', 'Arial', sans-serif;
 }
-
+/* grid-styles */
+.holy-grail {
+    display: grid;
+    grid-template-areas:
+    "header"
+    "main"
+    "left-side"
+    "right-side"
+    "footer"
+}
+.holy-grail .c-header {
+    grid-area:header;
+}
+.holy-grail .c-sow-main {
+    grid-area: main;
+}
+.holy-grail .left {
+    grid-area: left-side;
+}
+.holy-grail .right {
+    grid-area: right-side;
+}
+.holy-grail .c-manage-footer {
+    grid-area: footer;
+}
 img:not(.logo) {
     max-width: 100%;
     height: auto;
@@ -48,7 +73,6 @@ img:not(.logo) {
     display: none;
     background: #F7F6ED;
 }
-
 
 .c-header-nav li {
     padding: 1rem;
@@ -88,25 +112,41 @@ input[type="search"] {
     text-shadow:  -1.5px 0 0 red;
     margin-bottom: 15px;
 }
-/* main section styles  */ 
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-}
 .subheader {
     font-weight: bold;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 15px;
 }
-.manage-account-section p {
-    text-align: left;
-    margin-bottom: 15px;
-    width: 300px;
+/* main styles */
+.c-sow-main {
+    background: white;
 }
-
+.c-sow-main p {
+    padding: 30px;
+}
+/* section styles */
+.app-promo-2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.c-sow-section .app-promo-2 img {
+    padding: 50px;
+}
+/*aside styles  */
+.c-sow-recent-comments {
+    padding: 20px;
+} 
+.c-sow-recent-comments .comment {
+    padding: 20px;
+    background: #D1D1FC;
+    margin-bottom: 20px;
+}
+.c-sow-recent-comments .comment .subheader {
+    text-align: left;
+}
 /* footer styles */
 .c-manage-footer nav, .c-manage-footer p{
     display: flex;
@@ -118,16 +158,20 @@ input[type="search"] {
     gap: 20px;
 }
 @media screen and (min-width: 550px) {
-    
-    label:not(.ntMenu), input[type="text"] {
-        display: inline-block;
-        width:50%;
-    }   
-
+    .holy-grail {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "header header"
+        "main main"
+        "left-side right-side"
+        "footer footer"
+        ;
+    }
+   
 }
 @media screen and (min-width: 800px) {
-    /* header styles */
-    .ntMenu {
+     /* header styles */
+     .ntMenu {
         display: none;
     }
     .c-header-nav {
@@ -146,10 +190,20 @@ input[type="search"] {
         align-self:center;
     }
 }
-    </style>
+@media screen and (min-width:880px) {
+    .holy-grail {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+        "header header header header"
+        "left-side main main right-side"
+        "footer footer footer footer"
+        ;
+    }
+} 
+</style>
 </head>
-<body>
-    <header class=c-header>
+<body class="holy-grail">
+    <header class="c-header sow-header">
         <img class="logo" src="../images/small-logo.png" alt="logo">
         <input type="checkbox" class="nt" id="nt">
         <nav class="c-header-nav">
@@ -167,29 +221,31 @@ input[type="search"] {
         </label>
         <input type="search">
     </header>
-    <main class="flex-container">
-        <section>
-            <h2 class="stylized-font">for iPhone and iPad: Roadside America</h2>
-    
-            <figure class="flex-container">
-                <img src="../images/mobile-app-scan-promo-small.JPG" alt="Description of Image 1">
-                <img src="../images/mobile-app-promo.jpg" alt="Description of Image 2">
-            </figure>
-        </section>
-        <section class="manage-account-section">
-            <h3 class="subheader">About our App</h3>
-    
-            <p>Our handy and amusing road trip tool guides you to the crazy places you've read about here, and also gives access to the "research" targets of potentially great places to explore.</p>
-            <p>Maps, directions, photos, stories and tips. Find and filter recommendations between two points. Save places to share and view on your compatible iPhone and iPad.  </p>
-            <p>Requires iOS 12.3 and higher. Basic full feature app: $2.99 for 1 region of 7; optional in-app purchase: $6.99 more for all remaining regions, or $1.99/ea.region a la carte.</p>
-            <p><a href="#">Learn more</a></p>
-            <figure>
-                <a href="#"><img class="img-pr-1" src="../images/appe_store_small.png" alt="apple store"></a>
-                <a href="#"></s><img class="img-pr-2" src="../images/google_play_small.png" alt="google store"></a>
-            </figure>
-        </section>
-
+    <main class="c-sow-main">
+        <img src="../images/Balboa-Park.jpg" alt="Balboa Park">
+        <h2 class="stylized-font">Site of the week</h2>
+        <h3 class="subheader">Balboa Park</h3>
+        <p>Balboa Park, nestled in the heart of sunny San Diego, California, stands as a cultural jewel and an enchanting oasis for visitors of all ages. Boasting lush gardens, historic architecture, and a myriad of world-class museums, Balboa Park offers a delightful escape into art, science, and nature. Take a leisurely stroll through the vibrant flora of the Botanical Building, marvel at the intricate beauty of the Spanish Village Art Center, or immerse yourself in the wonders of the San Diego Museum of Art. With its charming atmosphere, diverse attractions, and the iconic California Tower providing panoramic views, Balboa Park is a captivating destination that seamlessly blends history, culture, and natural beauty into an unforgettable experience. </p>
     </main>
+    <section class="c-sow-section left">
+        <figure class="app-promo-2">
+            <img src="../images/mobile-app-scan-promo-small.JPG" alt="App promotion to install the app">
+        </figure>
+
+    </section>
+    <aside class="c-sow-recent-comments right">
+        <h2 class="subheader">Recent comments</h2>
+        <article class="comment">
+            <h3 class="subheader">John Smith</h3>
+            <p>Balboa Park is a captivating haven in San Diego, blending stunning gardens, historic architecture, and diverse museums—a cultural gem offering endless wonders for every visitor.</p>
+        </article>
+        <article class="comment">
+            <h3 class="subheader">Karen Waldenthorp</h3>
+            <p>Balboa Park down in San Diego is a real nice blend of gardens, fancy buildings, and museums. It's got a little somethin' for everyone - nature, history, and culture mixin' together.</p>
+        </article>
+
+    </aside>
+
     <footer class="c-manage-footer">
         <nav>
              <ul>
@@ -207,6 +263,5 @@ input[type="search"] {
          </nav>
          <p>&copy; 2024 Roadside America</p>
      </footer>
-    
 </body>
 </html>
