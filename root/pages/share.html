@@ -1,4 +1,4 @@
-    <!DOCTYPE html>-->
+<!DOCTYPE html>
 <html lang="en">
     
     <head>
@@ -99,10 +99,7 @@
             .c-header > * {
                 padding: 10px;
             }
-            .c-header img {
-                margin: 0 auto;
-                width: 50%;
-            }
+           
             .c-header-nav {
                 position: absolute;
                 top:100%;
@@ -131,6 +128,7 @@
                 display: none;
             }
             
+            
             .nt:checked ~ nav {display: block;}
             .nt {
                 display: none;
@@ -150,6 +148,7 @@
 /* ----------------------------- main ---------------------------------------*/
             main {
                 width: 90%;
+                margin: auto;
             }
 /*------------------share---------------------*/ 
             section.wrapper-share {
@@ -203,12 +202,28 @@
                 padding: 3rem;
             }
             
-            section.review input {
+           
+            div.input-search {
                 width: 90%;
-                padding: .4rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #fff;
+                border: solid 1px #000;
                 border-radius: 10px;
+                margin: 1rem;
+                padding: .2rem;
+            }
+            
+            section.review input {
+                border: none;
                 font-size: 1.3rem;
-                text-align: center;
+                 padding: 0;
+            }
+            
+            span.search {
+                color: #808080;
+                font-size: 2rem;
             }
             
             section.review-wrapper {
@@ -223,6 +238,8 @@
                 border: solid 1px #000;
                 border-radius: 10px;
                 padding: 1rem;
+                width: 100%;
+                height: 100%;
             }
             
             article.largescreen {
@@ -243,6 +260,9 @@
                 gap: .5rem;
             }
             
+            div.share-wrapper-3 {
+                margin: auto;
+            }
             p.smallpurple {
                 color: #8a79cc;
                 font-size: .8rem;
@@ -252,6 +272,7 @@
                 font-size: 1rem;
                 width: 80%;
                 line-height: 1.2;
+                margin: auto;
             }
             
             p.viewmore {
@@ -349,6 +370,7 @@
                     background-color: #f7f6ed;
                     border: none;
                     padding: 1rem;
+                    white-space: nowrap;
                 }
                 
                 .c-header-nav li:last-child{
@@ -359,6 +381,17 @@
                 display: block;
                 }
                     
+                li.get-app a{
+                    font-size: 1rem;
+                    border: solid 1px #000;
+                    border-radius: 30px;
+                    background-color: #fff;
+                    padding: 0 .5rem .2rem;
+                }
+                
+                li.get-app span.star {
+                    font-size: 1.3rem;
+                }
 /*------------------share---------------------*/ 
                 section.wrapper-share {
                 width: 70%;
@@ -367,6 +400,11 @@
                 border-radius: 15px;
                 margin-left: 3rem;
                 position: relative;
+                }
+                    
+                div.input-search {
+                width: 60%;
+                margin: 1rem auto;
                 }
                 
                 div.only-large {
@@ -422,7 +460,7 @@
                     <li><a href="#">Plan</a></li>
                     <li><a href="share.html">Share</a></li>
                     <li><a href="#">About us</a></li>
-                    <li class="get-app"><a href="#"><span class="material-symbols-outlined">
+                    <li class="get-app"><a href="#"><span class="material-symbols-outlined icon star">
                     star</span>Get the App</a></li>
                 </ul>
             </nav>
@@ -454,7 +492,10 @@
                 
             <section class="review">
                 <h1>Reviews</h1>
-                <input type="text" placeholder="Search state or city">
+                <div class="input-search">
+                    <span class="material-symbols-outlined icon search">search</span>
+                    <input type="text" placeholder="Search state or city">
+                </div>
                 <section class="review-wrapper">
                     <article class="review-name">
                         <div class="review-wrapper-2 name-date">

@@ -28,7 +28,14 @@
               'opsz' 24
             }
             
-    
+            .icon { 
+              font-variation-settings:
+              'FILL' 0,
+              'wght' 400,
+              'GRAD' 0,
+              'opsz' 24
+            }
+
 
 /* --------------------------- global --------------------------------------*/
             body {
@@ -86,10 +93,11 @@
             .c-header > * {
                 padding: 10px;
             }
-            .c-header img {
+             .c-header img {
                 margin: 0 auto;
                 width: 50%;
             }
+            
             .c-header-nav {
                 position: absolute;
                 top:100%;
@@ -142,7 +150,7 @@
                 text-align: center;
             }
             
-            section.hero h1{
+            section.hero h1 {
                 color: #fff;
                 text-shadow: 1px 1px 2px rgba(0,0,0,.4);
                 width: 80%;
@@ -162,12 +170,28 @@
             section.idea-search p {
                 font-size: 1.5rem;
             }
-            section.idea-search input {
+            
+            div.input-search {
                 width: 90%;
-                padding: .4rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #fff;
+                border: solid 1px #000;
                 border-radius: 10px;
+                margin: 1rem;
+                padding: .2rem;
+            }
+            
+             section.idea-search input {
+                border: none;
                 font-size: 1.3rem;
-                text-align: center;
+                 padding: 0;
+            }
+            
+            span.search {
+                color: #808080;
+                font-size: 2rem;
             }
             
 /*------------------category---------------------*/   
@@ -215,6 +239,10 @@
                 color: #808080;
                 font-size: .8rem;
             }
+            
+            article.site-week p.viewmore {
+                color: #808080;
+            }
 /*--------------app download---------------*/  
             aside h2 {
                 text-shadow: none;
@@ -243,7 +271,7 @@
             }
             
 /* ----------------------------- media ---------------------------------------*/
-            @media screen and (min-width: 745px) {
+            @media screen and (min-width: 800px) {
                 .small {
                     display: none;
                 }
@@ -257,14 +285,12 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-            
                 }
                 
                 .c-header img {
-                    width: 40%;
-                    margin: 0;
+                    width: 200px;
+                    padding: 0 2rem;
                 }
-                
                  .ntMenu {;
                     display: none;
                 }
@@ -290,6 +316,7 @@
                     background-color: #f7f6ed;
                     border: none;
                     padding: 1rem;
+                    white-space: nowrap;
                 }
                 
                 .c-header-nav li:last-child{
@@ -297,18 +324,31 @@
                 }
             
                 li.get-app {
-                display: block;
-            }
+                    display: block;
+                    
+                }
 
+                li.get-app a{
+                    font-size: 1rem;
+                    border: solid 1px #000;
+                    border-radius: 30px;
+                    background-color: #fff;
+                    padding: 0 .5rem .2rem;
+                }
+                
+                li.get-app span.star {
+                    font-size: 1.3rem;
+                }
 /*------------------category---------------------*/  
                 article.category {
                     display: flex;
-        
+                    
                 }
                 
                 article.category img {
-                   
+                   max-width: 180px;
                 }
+                
                 
 /*------------------articel, aside---------------------*/ 
                 section.wrapper {
@@ -316,6 +356,11 @@
                     gap: 0;
                 }
                 
+                article.site-week {
+                    background-color: rgba(255,255,255,.8);
+                    margin-top: 2rem;
+                    padding: 0 1.5rem 1rem;
+                }
                 article.site-week h2 {
                     border-top: none;
                 }
@@ -324,7 +369,7 @@
                     display: none;
                 }
                 aside img.large {
-                    padding-top: 2rem;
+                    padding-top: 3.5rem;
                     width: 60%;
                     margin: auto;
                 }
@@ -348,7 +393,7 @@
                     <li><a href="#">Plan</a></li>
                     <li><a href="pages/share.html">Share</a></li>
                     <li><a href="#">About us</a></li>
-                    <li class="get-app"><a href="#"><span class="material-symbols-outlined">
+                    <li class="get-app"><a href="#"><span class="material-symbols-outlined icon star">
                     star</span>Get the App</a></li>
                 </ul>
             </nav>
@@ -368,7 +413,10 @@
                
                 <section class="idea-search">
                     <p>Bored with typical vacations? We have some ideas!</p>
-                    <input type="text" placeholder="Search state or city">
+                    <div class="input-search">
+                        <span class="material-symbols-outlined icon search">search</span>
+                        <input type="text" placeholder="Search state or city">
+                    </div>
                 </section>
 
                 <section class="attractions">
@@ -377,7 +425,7 @@
                         <figure>
                             <img class="small" src="images/beach_small.jpg" alt="beach with blue sky">
                             <img class="large" src="images/beach_large.jpg" alt="beach with blue sky">
-                            <figcaption><a href="#">Beach Vacations</a></figcaption>
+                            <figcaption><a href="#">Beach</a></figcaption>
                         </figure>
                         <figure>
                             <img class="small" src="images/mountains_small.jpg" alt="mountains">
@@ -432,6 +480,7 @@
                                   <p>March 18, 2023</p>
                               </li>
                           </ul>
+                          <a href="#"><p class="viewmore">View more<span class="material-symbols-outlined icon">expand_circle_down</span></p></a>
                     </article>
 
                     <aside class="app-download">

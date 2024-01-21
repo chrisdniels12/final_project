@@ -127,6 +127,7 @@
                 display: none;
             }
             
+            
             .nt:checked ~ nav {display: block;}
             .nt {
                 display: none;
@@ -149,6 +150,7 @@
 /* ----------------------------- blog ------------------------------*/
             section.blog {
                 margin: auto; 
+                width: 90%;
             }
             
             section.blog a{
@@ -160,13 +162,14 @@
             }
             
             article.blog-list {
-                width: 80%;
                 background-color: #fff;
                 border: solid 1px #000;
                 margin-bottom: 2rem;
                 padding: 1rem;
+                text-align: center;
             }
            
+        
             article.blog-list p{
                 padding: .5rem 0;
                 
@@ -174,6 +177,16 @@
             
             p.dates {
                 font-size: 1rem;
+            }
+            
+            div.viewmore {
+                color: #808080;
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+            
+            div.viewmore a {
+                color: #808080;
             }
             
 /* ----------------------------- footer ---------------------------------------*/
@@ -240,6 +253,7 @@
                     background-color: #f7f6ed;
                     border: none;
                     padding: 1rem;
+                    white-space: nowrap;
                 }
                 
                 .c-header-nav li:last-child{
@@ -249,16 +263,42 @@
                 li.get-app {
                    display: block;
                 }
+                    
+                li.get-app a{
+                    font-size: 1rem;
+                    border: solid 1px #000;
+                    border-radius: 30px;
+                    background-color: #fff;
+                    padding: 0 .5rem .2rem;
+                }
+                
+                li.get-app span.star {
+                    font-size: 1.3rem;
+                }
             
             }
 /* ----------------------------- media large-------------------------------------*/
-                @media screen and (min-width: 850px) {
+                @media screen and (min-width: 1000px) {
 /*------------------blog---------------------*/ 
-                section.blog {
-                    display: grid;
-                    grid-template-columns: repeat(3,1fr);
+                    section.blog {
+                        display: grid;
+                        grid-template-columns: repeat(3,1fr);
+                        gap: 1rem;
+                    }
                     
-                }
+                    div.blog-wrapper{
+                        text-align: left;
+                    }
+                    
+                    div.viewmore {
+                        grid-row: 2/3;
+                        grid-column: 1/4;
+                        margin: 1rem auto;
+                    }
+                    
+                    div.viewmore a{
+                        color: #808080;
+                    }
             }
         </style>
     </head>
@@ -275,7 +315,7 @@
                     <li><a href="#">Plan</a></li>
                     <li><a href="share.html">Share</a></li>
                     <li><a href="#">About us</a></li>
-                    <li class="get-app"><a href="#"><span class="material-symbols-outlined">
+                    <li class="get-app"><a href="#"><span class="material-symbols-outlined icon star">
                     star</span>Get the App</a></li>
                 </ul>
             </nav>
@@ -293,28 +333,37 @@
         <section class="blog">
             <article class="blog-list">
                 <img src="../images/blog_1.jpeg" alt="pictures on the wall">
-                <h2>Memories of a Seventies Punk Rock Tourist</h2>
-                <p class="dates">December 3, 2023</p>
-                <p class="blog_sentences">The Punk Rock Museum opened in 2023 in Las Vegas. We visited in June, a few months later. The collection is crammed
-                with artifacts from 50 years of punk culture, filling every space with huge blow ups of concert photos, and thousands of images, art, posters, and zines.</p>
-                <a href="#" class="read-a">Read Article</a>
+                <div class="blog-wrapper">
+                    <h2>Memories of a Seventies Punk Rock Tourist</h2>
+                    <p class="dates">December 3, 2023</p>
+                    <p class="blog_sentences">The Punk Rock Museum opened in 2023 in Las Vegas. We visited in June, a few months later. The collection is crammed
+                    with artifacts from 50 years of punk culture, filling every space with huge blow ups of concert photos, and thousands of images, art, posters, and zines.</p>
+                    <a href="#" class="read-a">Read Article</a>
+                </div>
             </article>
             <article class="blog-list">
                 <img src="../images/blog_2.jpeg" alt="comic page">
-                <h2>Is Taxidermy Dead?</h2>
-                <p class="dates">October 28, 2023</p>
-                <p class="blog_sentences">Several recent news stories suggest that displays of animal taxidermy are
-                becoming extinct at mainstream establishment museums. They are viewed by the academically trained — those in charge — as controversial embarrassments and, worse, old.</p>
-                <a href="#" class="read-a">Read Article</a>
+                <div class="blog-wrapper">
+                        <h2>Is Taxidermy Dead?</h2>
+                        <p class="dates">October 28, 2023</p>
+                        <p class="blog_sentences">Several recent news stories suggest that displays of animal taxidermy are
+                        becoming extinct at mainstream establishment museums. They are viewed by the academically trained — those in charge — as controversial embarrassments and, worse, old.</p>
+                        <a href="#" class="read-a">Read Article</a>
+                </div>
             </article>
             <article class="blog-list">
                 <img src="../images/blog_3.jpeg" alt="tombstone of Charles Speedy Aikins">
-                <h2>Belated Burials: Expired, Unidentified, and Famous!</h2>
-                <p class="dates">October 4, 2023</p>
-                <p class="blog_sentences">Fans of bizarre tourist attractions saw their travel plans disrupted recently when it was announced that Stoneman Willie,
-                a preserved corpse on display since 1895 in Reading, Pennsylvania, had finally been identified and would be buried under his real name.</p>
-                <a href="#" class="read-a">Read Article</a>
+                <div class="blog-wrapper">
+                        <h2>Belated Burials: Expired, Unidentified, and Famous!</h2>
+                        <p class="dates">October 4, 2023</p>
+                        <p class="blog_sentences">Fans of bizarre tourist attractions saw their travel plans disrupted recently when it was announced that Stoneman Willie,
+                        a preserved corpse on display since 1895 in Reading, Pennsylvania, had finally been identified and would be buried under his real name.</p>
+                        <a href="#" class="read-a">Read Article</a>
+                </div>
             </article>
+            <div class="viewmore">
+                <a href="#">View more<span class="material-symbols-outlined icon">expand_circle_down</span></a>
+            </div>
         </section>
         
         <footer class="c-manage-footer">
