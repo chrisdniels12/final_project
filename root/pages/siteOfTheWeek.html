@@ -143,6 +143,7 @@ input[type="search"] {
     padding: 20px;
     background: #D1D1FC;
     margin-bottom: 20px;
+    border: solid 1px gray;
 }
 .c-sow-recent-comments .comment .subheader {
     text-align: left;
@@ -196,9 +197,18 @@ input[type="search"] {
         grid-template-areas: 
         "header header header header"
         "left-side main main right-side"
-        "footer footer footer footer"
-        ;
+        "footer footer footer footer";
     }
+    .left {
+        display: flex;
+        align-items: center;
+    } 
+    .right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
 } 
 </style>
 </head>
