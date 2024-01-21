@@ -237,6 +237,13 @@ button[type="submit"] {
     .manage-form {
         display: inline;
     }
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+    }
+    .hero-img {
+        align-self: center;
+    }
     label:not(.ntMenu), input[type="text"] {
         display: inline-block;
         width:50%;
@@ -322,7 +329,7 @@ button[type="submit"] {
        
         <figure class="hero-section">
             <figcaption class="stylized-font">Manage account</figcaption>
-            <img src="../images/manage_account_hero_img.png" alt=" paper map of US">
+            <img class="hero-img" src="../images/manage_account_hero_img.png" alt=" paper map of US">
             <p class="overlay_text">Empower your experience, manage with ease</p>
         </figure>
         <form class="manage-form" action="#">
