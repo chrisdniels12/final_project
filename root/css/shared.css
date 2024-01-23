@@ -1,5 +1,5 @@
 /* <uniquifier>: Use a uniquifier for the class name
-<weight>: Use a value from 100 to 900
+<weight>: Use a value from 100 to 900 
 
 .montserrat-<uniquifier> {
   font-family: "Montserrat", sans-serif;
@@ -18,7 +18,7 @@ header {
     width: 100%;
     z-index: 100;
     margin: 0;
-    padding:0;
+    padding: 0;
 
 }
 
@@ -133,9 +133,10 @@ body {
     align-items: center;
     height: 15vh;
 }
-/*.formsection {
+
+.formsection {
     display: none;
-}*/
+}
 .check {
     padding: 10px;
     border: 2px solid #333;
@@ -166,9 +167,11 @@ body {
     transition: color 0.3s;
     /* Transition for color change */
 }
+
 .check.clicked::before {
     color: white;
 }
+
 .check:hover::before {
     color: white;
 }
@@ -209,6 +212,7 @@ input {
     height: auto;
     margin: auto 1rem;
 }
+
 footer {
     display: block;
     background-color: darkgray;
@@ -216,35 +220,44 @@ footer {
     height: 7rem;
     text-align: center;
 }
-.alphasections {
-    display: flex;
-}
+
 .alpha {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: .5rem;
-   text-align: center;
-    margin: .5rem;
+    text-align: center;
+    margin: .5rem 0 .5rem .5rem;
     font-size: 1.1rem;
     background-color: #f7931e;
     padding: 1em;
-    
+
 }
 
 .alpha a {
     color: black;
     text-decoration: none;
 }
+
 .alpha a:hover {
     text-decoration: underline;
 }
+
+.alphasections {
+    display: flex;
+}
+
+#jqalpha {
+    display: none;
+}
+
 section {
     margin: 1rem;
     font-size: 1.5rem;
     line-height: 1.5;
     min-width: 341px;
 }
+
 section h2 {
     font-size: 3rem;
     text-shadow: 2px 2px 4px rgba(255, 0, 0, .7);
@@ -252,24 +265,90 @@ section h2 {
     margin: 1rem;
     color: black;
 }
-section a {
-    color: black;
+
+section a:link {
+    color: #000;
 }
+
+section a:visited {
+    color: #000;
+}
+
+section a:active {
+    color: #f7931e;
+}
+
 .themed figure img {
     display: block;
     border: solid 2px #000;
-    margin: 10rem 0;
-     
+    margin: 10rem 1rem;
+    max-width: 100%;
+    height: auto;
+
 }
+
 .themed figure:nth-of-type(1) {
-    margin-top: 70%;
+    margin-top: 2rem;
 }
+
+#h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #f7931e;
+}
+
+#rtdoodle {
+    margin: 0;
+    width: 100%;
+}
+
+#bodyplan {
+    background-color: #fff;
+}
+
+.mainplan {
+    margin: .5rem;
+    padding: .2rem;
+    font-weight: 600;
+    line-height: 2;
+
+}
+
+.mainplan h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+
+}
+
+.mainplan ul li {
+    padding: 1rem;
+}
+
+.mainplan li a {
+    color: #f7931e;
+}
+
+.mainplan li a:active {
+    color: #c5d6e2;
+}
+
+.help {
+    font-weight: 500;
+    color: #8a79cc;
+    padding: .5rem;
+    font-size: 1.2rem;
+    line-height: 2;
+    text-align: center;
+}
+
 @media screen and (min-width:720px) {
     #logo {
         display: inline-block;
         padding-top: 3rem;
         width: 400px;
     }
+
     #nav {
         padding: 0;
     }
@@ -295,7 +374,7 @@ section a {
     #nav a {
         display: inline-block;
     }
-    
+
     .pgtitle {
         max-width: 100%;
     }
@@ -303,24 +382,28 @@ section a {
     .check {
         max-width: 318px;
     }
+
     main {
         padding: 2.5rem .5rem;
         max-width: 1200px;
     }
+
     .n-formmain {
         display: grid;
         background: url(../images/traveldoodle.png) 0 90px/auto repeat-x;
         grid-template-areas:
             "button1 . button2"
-            "content1 img1 content2";   
+            "content1 img1 content2";
     }
+
     #left {
         grid-area: content1;
     }
+
     #right {
         grid-area: content2;
     }
-    
+
     .mytrippic {
         display: block;
         margin: 0 .5rem;
@@ -329,13 +412,53 @@ section a {
         width: 300px;
         grid-area: img1;
     }
+
     #submitbtn {
         grid-area: button1;
     }
+
     #resetbtn {
         grid-area: button2;
     }
-    form {
+
+    .alpha {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        margin: auto;
+
+    }
+
+    section a:hover {
+        color: #fff;
+    }
+
+    section a:active {
+        color: #f7931e;
+    }
+
+    .themed {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        margin: auto;
+        max-width: 100%;
+        height: auto;
+
+
+    }
+
+    .themed figure:nth-of-type(1) {
+        margin-top: 0;
+    }
+    .mainplan li a:hover {
+        color: #8a79cc;
+    }
+}
+@media screen and (min-width:980px) {
         
+    #bodyplan main {
+        margin: auto 10%;
+        max-width: 1161;
     }
 }
