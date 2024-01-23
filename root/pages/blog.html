@@ -79,26 +79,27 @@
                 display: none;
             }
 /* ----------------------------- header ------------------------------*/
-            img:not(.logo) {
+            i img:not(.logo) {
                 max-width: 100%;
                 height: auto;
             }
             
             .c-header {
-                background-color: #f7f6ed;
                 display: flex;
                 position: relative;
                 z-index: 100;
                 width: 100%;
+                background: #F7F6ED;
             }
 
             .c-header > * {
                 padding: 10px;
             }
-            .c-header img {
+             .c-header img {
                 margin: 0 auto;
-                width: 50%;
+                width: 20%;
             }
+            
             .c-header-nav {
                 position: absolute;
                 top:100%;
@@ -110,13 +111,17 @@
 
             .c-header-nav li {
                 padding: 1rem;
+/*
                 border-top: solid 2px #b5b4b4;
                 background-color: #fff;
+*/
             }
             
+/*
             .c-header-nav li:last-child {
                 border-bottom: solid 2px #b5b4b4;
             }
+*/
 
             .c-header-nav li a {
                 display: block;
@@ -126,7 +131,6 @@
             li.get-app {
                 display: none;
             }
-            
             
             .nt:checked ~ nav {display: block;}
             .nt {
@@ -142,6 +146,7 @@
             .nt:checked ~ .ntMenu .menuOpen {
                 display: none;
             }
+                  
             
 /* ----------------------------- main ------------------------------*/
             main {
@@ -216,6 +221,18 @@
                 }
                 
 /*------------------header---------------------*/ 
+                     .ntMenu {
+                    display: none;
+                }
+                .c-header-nav {
+                    all:unset;
+                    display: flex;
+                }
+                .c-header-nav ul {
+                    display: flex;
+                    align-items: center;
+                }
+/*
                 header.c-header {
                     display: flex;
                     justify-content: center;
@@ -223,9 +240,9 @@
             
                 }
                 
-                .c-header img {
-                    width: 40%;
-                    margin: 0;
+                 .c-header img {
+                    width: 200px;
+                    padding: 0 2rem;
                 }
                 
                  .ntMenu {;
@@ -275,6 +292,7 @@
                 li.get-app span.star {
                     font-size: 1.3rem;
                 }
+*/
             
             }
 /* ----------------------------- media large-------------------------------------*/
@@ -286,6 +304,9 @@
                         gap: 1rem;
                     }
                     
+                    article.blog-list img{
+                        width: 80%;
+                    }
                     div.blog-wrapper{
                         text-align: left;
                     }
@@ -304,6 +325,26 @@
     </head>
 
     <body>
+        <header class=c-header>
+            <img class="logo small" src="../images/logo_small.png" alt="logo">
+            <img class="logo large" src="../images/logo_large.png" alt="logo">
+            <input type="checkbox" class="nt" id="nt">
+            <nav class="c-header-nav">
+                <ul>
+                    <li><a href="../index.html"> Home</a></li>
+                    <li><a href="explore.html"> Explore</a></li>
+                    <li><a href=""> Plan</a></li>
+                    <li><a href="share.html"> Share</a></li>
+                    <li><a href=""> About us</a></li>
+                </ul>
+            </nav>
+            <label for="nt" class="ntMenu" name="nt">
+                <span class="material-symbols-outlined mi menuOpen">menu</span>
+                <span class="material-symbols-outlined mi menuClose" id="menuClose">close</span>
+            </label>
+        </header>
+<!--
+<!--
         <header class=c-header>
             <a href="../index.html"><img class="logo small" src="../images/logo_small.png" alt="logo"></a>
             <a href="../index.html"><img class="logo large" src="../images/logo_large.png" alt="logo"></a>
@@ -324,6 +365,7 @@
                 <span class="material-symbols-outlined mi menuClose" id="menuClose">close</span>
             </label>
         </header>
+-->
         
         
         <main>
