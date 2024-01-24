@@ -3,296 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Manage account</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../css/c-styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" >
     <script src="https://kit.fontawesome.com/5894beddfb.js" crossorigin="anonymous"></script>
-    <style>
-        .material-symbols-outlined {
-          font-variation-settings:
-          'FILL' 0,
-          'wght' 900,
-          'GRAD' 0,
-          'opsz' 24
-}
-        
-body {
-    background-color: #F7F6ED;
-    font-family: 'Helvetica', 'Arial', sans-serif;
-}
 
-img:not(.logo) {
-    max-width: 100%;
-    height: auto;
-}
-.c-header {
-    display: flex;
-    position: relative;
-    z-index: 100;
-    width: 100%;
-}
-
-.c-header > * {
-    padding: 10px;
-}
-.c-header img {
-    margin: 0 auto;
-}
-.c-header-nav {
-    position: absolute;
-    top:100%;
-    width: 100%;
-    display: none;
-    background: #F7F6ED;
-}
-
-
-.c-header-nav li {
-    padding: 1rem;
-}
-
-.c-header-nav li a {
-    display: block;
-}
-.c-header-nav li a:hover {
-    color: purple;
-}
-
-.nt:checked ~ nav {display: block;}
-.nt {
-    display: none;
-}
-#menuClose {display: none;}
-.nt:checked ~ .ntMenu #menuClose {
-    display: block;
-}
-.nt:checked ~ .ntMenu #menuClose {
-    display: block;
-}
-.nt:checked ~ .ntMenu .menuOpen {
-    display: none;
-}
-input[type="search"] {
-    display: none;
-}
-figure {
-    width: 100%;
-    height: auto;
-    position: relative;
-}
-.overlay_text {
-    font-size: 1rem;
-    color: white;
-    position: absolute;
-    font-weight: bold;
-    text-shadow: -2px 1px 0px #000;
-    top: 50%;
-    left: 25%;
-    right: 25%;
-}
-.stylized-font {
-    font-size: 1.2em;
-    font-weight: bold;
-    text-align: center;
-    text-shadow:  -1.5px 0 0 red;
-}
-
-.manage-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.manage-form .form-header {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-evenly;
-    position: relative;
-}
-.manage-form img {
-    order: -1;
-    max-width: 100%;
-    height:auto;
-}
-.form-header h2 {
-}
-.manage-form .form-header .add {
-    position: absolute;
-    right: 66%;
-    top: 74%;
-    cursor: pointer;
-}
-.flex-outer {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.flex-outer li {
-  display:flex;
-  flex-wrap: wrap;
- align-items:center;
-}
-
-.flex-outer > li > label {
-  flex: 1 0 220px;
-  max-width: 220px;
-}
-.flex-outer >li:not(:last-child) {
-  margin-bottom: 20px;
-}
-
-.flex-outer li label {
-padding: 8px;
-font-weight: 300px;
-letter-spacing: .09em;
-text-transform: uppercase;
-}
-
-.flex-out > li > label + * {
-  flex: 1 0 220px;
-}
-
-.flex-outer li input:not([type="checkbox"]) {
-  padding: 15px 10% 15px 15px;
-  border: none;
-}
-
-button[type="submit"] {
-    margin: auto;
-    width: 189px;
-    height: 51px;
-    color: white;
-    text-transform: capitalize;
-    background: #F57D20;
-    margin-bottom: 10px;
-    border-bottom: 3px solid black;
-    border-radius: 10px;
-    box-shadow: 0 4px 2px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-}
-
-.app-promo h3 {
-    width: 50%;
-    font-weight: bold;
-    margin: auto;
-    padding: 10px;
-    text-align: center;
-    border-top: solid 1px black;
-}
-
-.app-promo-imgs {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 10px;
-    
-}
-
-.app-promo-2 {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.app-promo-img-3 {
-    margin: auto;
-}
-
-.trip-hub {
-    background: white;
-    text-align: center;
-    padding: 10px 0;
-    width: 40%;
-    margin: auto;
-}
-
-.trip-hub ul li {
-    margin: 20px auto;
-    padding: 10px;
-    border-bottom: solid 1px black;
-}
-
- a {
-    text-decoration: none;
-    display: block;
-}
-
-.c-manage-footer nav, .c-manage-footer p{
-    display: flex;
-    justify-content: center;
-    margin: 20px auto;
-}
-.c-manage-footer nav ul {
-    display: flex;
-    gap: 20px;
-}
-
-@media screen and (min-width: 550px) {
-    .manage-form {
-        display: inline;
-    }
-    label:not(.ntMenu), input[type="text"] {
-        display: inline-block;
-        width:50%;
-    }
-    .app-promo-2 {
-        display: inline-block;
-        margin: auto 4%;
-        width: auto;
-    }
-    .trip-hub {
-        display: inline-block;
-    }
-}
-@media screen and (min-width: 800px) {
-    .manage-account {
-        display: grid;
-        grid-template-areas: 
-            "hero hero form form"
-            "hub apr-2 form form"
-            "hub apr-2 form form"
-            "apr apr apr apr"
-
-    }
-    .hero-section {
-        grid-area: hero;
-    }
-    .manage-form {
-        grid-area:form;
-    }
-    .app-promo {
-        grid-area: apr;
-    }
-    .app-promo-2 {
-        grid-area: apr-2;
-    }
-    .trip-hub {
-        grid-area: hub;
-    }
-    .ntMenu {
-        display: none;
-    }
-    .c-header-nav {
-        all:unset;
-        display: flex;
-    }
-    .c-header-nav ul {
-        display: flex;
-        align-items: center;
-    }
-    input[type="search"] {
-        display: block;
-        margin-left:auto;
-        margin-right: 5px;
-        width: 50%;
-        align-self:center;
-    }
-}
-
-
-    </style>
 </head>
 <body>
     <header class=c-header>
@@ -301,13 +19,14 @@ button[type="submit"] {
         <nav class="c-header-nav">
             <ul>
                 <li><a href="#"> Home</a></li>
+                <li><a href="mobileApp.html">Mobile App</a></li>
                 <li><a href="#"> Explore</a></li>
                 <li><a href="#"> Plan</a></li>
                 <li><a href="#"> Share</a></li>
                 <li><a href="#"> About us</a></li>
             </ul>
         </nav>
-        <label for="nt" class="ntMenu" name="nt">
+        <label for="nt" class="ntMenu">
             <span class="material-symbols-outlined mi menuOpen">menu</span>
             <span class="material-symbols-outlined mi menuClose" id="menuClose">close</span>
         </label>
@@ -315,9 +34,9 @@ button[type="submit"] {
     </header>
     <main class="manage-account">
        
-        <figure class="hero-section">
+        <figure class="hero-section c-myfig">
             <figcaption class="stylized-font">Manage account</figcaption>
-            <img src="../images/manage_account_hero_img.png" alt=" paper map of US">
+            <img class="hero-img" src="../images/manage_account_hero_img.png" alt=" paper map of US">
             <p class="overlay_text">Empower your experience, manage with ease</p>
         </figure>
         <form class="manage-form" action="#">
@@ -355,14 +74,14 @@ button[type="submit"] {
         
         <section class="app-promo">
             <h3>Go further with our app!</h3>
-            <figure class="app-promo-imgs">
+            <figure class="app-promo-imgs c-myfig">
                 <img class="img-pr-1" src="../images/appe_store_small.png" alt="apple store">
                 <img class="img-pr-2" src="../images/google_play_small.png" alt="google store">
             </figure>
         </section>
     
-    <figure class="app-promo-2">
-        <img class="app-promo-img-3" src="https://placehold.co/246x373" alt="Get out app">
+    <figure class="app-promo-2 c-myfig">
+        <img class="app-promo-img-3" src="../images/mobile-app-scan-promo-small.JPG" alt="Get out app">
     </figure>
     <nav class="trip-hub">
         <h2 class="stylized-font">Trip Hub</h2>
