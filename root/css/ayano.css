@@ -482,6 +482,7 @@ h1.a-blog-h1 {
             }
             article.site-week p:nth-child(odd){
                 color: #8a79cc;
+                text-align: left;
             }
             
              article.site-week p:nth-child(even){
