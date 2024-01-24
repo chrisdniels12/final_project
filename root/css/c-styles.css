@@ -1,0 +1,422 @@
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 900,
+    'GRAD' 0,
+    'opsz' 24
+}
+  
+body {
+background-color: #F7F6ED;
+font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+img:not(.logo) {
+max-width: 100%;
+height: auto;
+margin-bottom: 20px;
+}
+/* header styles */
+.c-header {
+display: flex;
+position: relative;
+z-index: 100;
+width: 100%;
+}
+
+.c-header > * {
+padding: 10px;
+}
+.c-header img {
+margin: 0 auto;
+}
+.c-header-nav {
+position: absolute;
+top:100%;
+width: 100%;
+display: none;
+background: #F7F6ED;
+}
+
+
+.c-header-nav li {
+padding: 1rem;
+}
+
+.c-header-nav li a {
+display: block;
+}
+.c-header-nav li a:hover {
+color: purple;
+}
+
+.nt:checked ~ nav {display: block;}
+.nt {
+display: none;
+}
+#menuClose {display: none;}
+.nt:checked ~ .ntMenu #menuClose {
+display: block;
+}
+.nt:checked ~ .ntMenu #menuClose {
+display: block;
+}
+.nt:checked ~ .ntMenu .menuOpen {
+display: none;
+}
+input[type="search"] {
+display: none;
+
+} 
+/* general styles */
+
+.stylized-font {
+font-size: 1.2em;
+font-weight: bold;
+text-align: center;
+text-shadow:  -1.5px 0 0 red;
+margin-bottom: 15px;
+}
+
+/* main section styles  */ 
+/* New -style incorporated from siteOfTheWeek*/
+/* SOW page styles*/
+/* grid-styles */
+.holy-grail {
+display: grid;
+grid-template-areas:
+"header"
+"main"
+"left-side"
+"right-side"
+"footer"
+}
+.holy-grail .c-header {
+grid-area:header;
+}
+.holy-grail .c-sow-main {
+grid-area: main;
+}
+.holy-grail .left {
+grid-area: left-side;
+}
+.holy-grail .right {
+grid-area: right-side;
+}
+.holy-grail .c-manage-footer {
+grid-area: footer;
+}
+/* New - main styles from SOW page*/
+.c-sow-main {
+background: white;
+}
+.c-sow-main p {
+padding: 30px;
+}
+/* section styles*/
+.c-sow-section .app-promo-2 img {
+padding: 50px;
+}
+/*SOW page aside styles*/
+.c-sow-recent-comments {
+padding: 20px;
+} 
+.c-sow-recent-comments .comment {
+padding: 20px;
+background: #D1D1FC;
+margin-bottom: 20px;
+border: solid 1px gray;
+}
+.c-sow-recent-comments .comment .subheader {
+text-align: left;
+}
+
+
+/* New -style incorporated from manageAccount*/
+.c-myfig {
+width: 100%;
+height: auto;
+position: relative;
+}
+/* hero section text - manageAccount */
+.overlay_text {
+font-size: 1rem;
+color: white;
+position: absolute;
+font-weight: bold;
+text-shadow: -2px 1px 0px #000;
+top: 50%;
+left: 25%;
+right: 25%;
+}
+
+
+/* ManageAccount - responsive form */
+.manage-form {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.manage-form .form-header {
+display: flex;
+width: 100%;
+align-items: center;
+justify-content: space-evenly;
+position: relative;
+}
+.manage-form img {
+order: -1;
+max-width: 100%;
+height:auto;
+}
+
+.manage-form .form-header .add {
+position: absolute;
+right: 66%;
+top: 74%;
+cursor: pointer;
+}
+.flex-outer {
+max-width: 800px;
+margin: 0 auto;
+}
+
+.flex-outer li {
+display:flex;
+flex-wrap: wrap;
+align-items:center;
+}
+
+.flex-outer > li > label {
+flex: 1 0 220px;
+max-width: 220px;
+}
+.flex-outer >li:not(:last-child) {
+margin-bottom: 20px;
+}
+
+.flex-outer li label {
+padding: 8px;
+font-weight: 300;
+letter-spacing: .09em;
+text-transform: uppercase;
+}
+
+.flex-out > li > label + * {
+flex: 1 0 220px;
+}
+
+.flex-outer li input:not([type="checkbox"]) {
+padding: 15px 10% 15px 15px;
+border: none;
+}
+/* submit button in the form */
+button[type="submit"] {
+margin: auto;
+width: 189px;
+height: 51px;
+color: white;
+text-transform: capitalize;
+background: #F57D20;
+margin-bottom: 10px;
+border-bottom: 3px solid black;
+border-radius: 10px;
+box-shadow: 0 4px 2px rgba(0, 0, 0, 0.1);
+cursor: pointer;
+}
+/* promotional container styles- manage account */
+.app-promo h3 {
+width: 50%;
+font-weight: bold;
+margin: auto;
+padding: 10px;
+text-align: center;
+border-top: solid 1px black;
+}
+
+.app-promo-imgs {
+display: flex;
+justify-content: center;
+gap: 10px;
+margin-bottom: 10px;
+
+}
+
+.app-promo-2 {
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.app-promo-img-3 {
+margin: auto;
+}
+/* Manage account - Trip hub section */
+.trip-hub {
+background: white;
+text-align: center;
+padding: 10px 0;
+width: 40%;
+margin: auto;
+}
+
+.trip-hub ul li {
+margin: 20px auto;
+padding: 10px;
+border-bottom: solid 1px black;
+}
+.trip-hub ul li:last-child {
+margin-bottom: 0;
+}
+
+.trip-hub ul li a {
+text-decoration: none;
+display: block;
+}
+
+
+/*Mobile app - styles*/
+
+.flex-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 30px;
+}
+.subheader {
+font-weight: bold;
+text-align: center;
+margin-top: 20px;
+margin-bottom: 15px;
+}
+.manage-account-section p {
+text-align: left;
+margin-bottom: 15px;
+width: 300px;
+}
+
+/* footer styles */
+.c-manage-footer nav, .c-manage-footer p{
+display: flex;
+justify-content: center;
+margin: 20px auto;
+}
+.c-manage-footer nav ul {
+display: flex;
+gap: 20px;
+}
+/* Mobile app - media Query */
+@media screen and (min-width: 550px) {
+/*mobile app*/
+label:not(.ntMenu), input[type="text"] {
+  display: inline-block;
+  width:50%;
+}   
+/* ManageAccount*/
+.manage-form {
+  display: inline;
+}
+.hero-section {
+  display: flex;
+  flex-direction: column;
+}
+.hero-img {
+  align-self: center;
+}
+label:not(.ntMenu), input[type="text"] {
+  display: inline-block;
+  width:50%;
+}
+.app-promo-2 {
+  display: inline-block;
+  margin: auto 4%;
+  width: auto;
+  margin-left: 50px
+}
+.left .app-promo-2 {
+    margin-left: 0;
+}
+.trip-hub {
+  display: inline-block;
+}
+/* SOW page media Query styles*/
+.holy-grail {
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+  "header header"
+  "main main"
+  "left-side right-side"
+  "footer footer";
+}
+
+}
+/* Mobile app - media query */
+@media screen and (min-width: 800px) {
+/* header styles */
+.ntMenu {
+  display: none;
+}
+.c-header-nav {
+  all:unset;
+  display: flex;
+}
+.c-header-nav ul {
+  display: flex;
+  align-items: center;
+}
+input[type="search"] {
+  display: block;
+  margin-left:auto;
+  margin-right: 5px;
+  width: 50%;
+  align-self:center;
+}
+}
+/* SOW page - media Query*/
+@media screen and (min-width:880px) {
+.holy-grail {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: 
+  "header header header header"
+  "left-side main main right-side"
+  "footer footer footer footer";
+}
+.left {
+  display: flex;
+  align-items: center;
+} 
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+} 
+
+/* Manage account - media query*/
+@media screen and (min-width: 1200px) {
+.manage-account {
+  display: grid;
+  grid-template-areas: 
+      "hero hero form form"
+      "hub apr-2 form form"
+      "hub apr-2 form form"
+      "apr apr apr apr"
+
+}
+.hero-section {
+  grid-area: hero;
+}
+.manage-form {
+  grid-area:form;
+}
+.app-promo {
+  grid-area: apr;
+}
+.app-promo-2 {
+  grid-area: apr-2;
+}
+.trip-hub {
+  grid-area: hub;
+}
+}
