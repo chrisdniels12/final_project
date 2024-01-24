@@ -7,6 +7,8 @@
   font-weight: <weight>;
   font-style: normal;
 } */
+
+/* Global styles */
 html {
     font-family: 'Montserrat', 'Arial', sans-serif;
     font-size: 1rem;
@@ -125,7 +127,24 @@ body {
     text-shadow: 2px 2px 4px rgba(255, 0, 0, .7);
     margin: 1rem auto;
 }
-/* My Trip page styles */
+/* footer styles */
+footer {
+    display: block;
+    background-color: darkgray;
+    padding: 1rem;
+    height: 7rem;
+}
+
+.c-manage-footer nav, .c-manage-footer p{
+display: flex;
+justify-content: center;
+margin: .7rem auto;  
+}
+.c-manage-footer nav ul {
+display: flex;
+gap: 20px;
+}
+/*my trip page styles*/
 .triptype {
     display: flex;
     flex-direction: column;
@@ -165,6 +184,7 @@ body {
     color: transparent;
     display: inline-block;
     transition: color 0.3s;
+    /* Transition for color change */
 }
 
 .check.clicked::before {
@@ -184,9 +204,16 @@ form {
     padding-top: 2rem;
     margin: 50px 0;
 }
-
-label,
-input {
+#left, #right {
+    margin-left: 25%;
+}
+#left:nth-of-type(1) {
+    margin-top: 1rem;
+}
+#submitbtn, #resetbtn {
+    margin-left: 50%;
+}
+label, input {
     margin-bottom: 40px;
 }
 
@@ -211,9 +238,7 @@ input {
     height: auto;
     margin: auto 1rem;
 }
-
-
-/* Themed Trips page styles */
+/* themed trip page styles */
 .alpha {
     display: flex;
     flex-direction: row;
@@ -283,8 +308,7 @@ section a:active {
 .themed figure:nth-of-type(1) {
     margin-top: 2rem;
 }
-
-/* Plan page styles */
+/* plan page styles */
 #h2 {
     text-align: center;
     font-size: 2rem;
@@ -335,7 +359,7 @@ section a:active {
     line-height: 2;
     text-align: center;
 }
-/* Media queries */
+
 @media screen and (min-width:720px) {
     #logo {
         display: inline-block;
@@ -384,6 +408,9 @@ section a:active {
     .n-formmain {
         background: url(../images/traveldoodle.png) 0 90px/auto repeat-x;
     }
+    .formlabel {
+    padding: 15px 75px;
+    }
     .formgroup {
         display: grid;
         grid-template-areas:
@@ -393,10 +420,12 @@ section a:active {
     }
 
     #left {
+        margin: auto;
         grid-area: content1;
     }
 
     #right {
+        margin: 1rem;
         grid-area: content2;
     }
 
@@ -416,14 +445,14 @@ section a:active {
         position:absolute;
         top: 30rem;
         left: 15rem;
-        
+        margin: auto;
     }
 
     #resetbtn {
         position: absolute;
         top: 30rem;
        right: 5rem;
-       
+       margin: auto;
     }
 
     .alpha {

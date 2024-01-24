@@ -399,12 +399,10 @@ footer {
         .ntMenu {
             display: none;
         }
-
         .c-header-nav {
             all: unset;
             display: flex;
         }
-
         .c-header-nav ul {
             display: flex;
             align-items: center;
