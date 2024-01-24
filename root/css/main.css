@@ -8,7 +8,58 @@
 5. Generic selectors (shared page class styles)
 6. Footer content */
 /* ***************************************************************  */
-
+/* header styles */
+.c-header {
+    display: flex;
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    }
+    
+    .c-header > * {
+    padding: 10px;
+    }
+    .c-header img {
+    margin: 0 auto;
+    }
+    .c-header-nav {
+    position: absolute;
+    top:100%;
+    width: 100%;
+    display: none;
+    background: #F7F6ED;
+    }
+    
+    
+    .c-header-nav li {
+    padding: 1rem;
+    }
+    
+    .c-header-nav li a {
+    display: block;
+    }
+    .c-header-nav li a:hover {
+    color: purple;
+    }
+    
+    .nt:checked ~ nav {display: block;}
+    .nt {
+    display: none;
+    }
+    #menuClose {display: none;}
+    .nt:checked ~ .ntMenu #menuClose {
+    display: block;
+    }
+    .nt:checked ~ .ntMenu #menuClose {
+    display: block;
+    }
+    .nt:checked ~ .ntMenu .menuOpen {
+    display: none;
+    }
+    input[type="search"] {
+    display: none;
+    
+    } 
 /*****************************
 ******************************                 
 1. Project deatils & color and typography guidelines
