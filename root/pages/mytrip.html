@@ -24,7 +24,7 @@
 </head>
 <header>
     <picture>
-        <source media="(min-width:720px)" srcset="../images/logo_large.png" >
+        <source media="(min-width:720px)" srcset="../images/logo_large.png">
         <img src="../images/logo.png" alt="Roadside America logo" id="logo">
     </picture>
 </header>
@@ -78,8 +78,12 @@
         <article class="formsection">
             <form action="#" id="choiceform">
 
-                <ul class="formgroup">
-                    <article id="left">
+                <section class="formgroup">
+                    <article id="trippic">
+                        <img src="../images/Marblehead-Lighthouse.jpeg" alt="family on the shore, lighthouse in the background"  class="mytrippic">
+                    </article>
+                    <ul id="left">
+
                         <li>
                             <label for="location" class="formlabel">Location</label>
                             <p></p>
@@ -95,8 +99,9 @@
                             <p></p>
                             <input type="text" class="formcontrol" id="startpoint" placeholder="City">
                         </li>
-                    </article>
-                    <article id="right">
+
+                    </ul>
+                    <ul id="right">
                         <li>
                             <label for="addstop" class="formlabel">Add a stop</label>
                             <p></p>
@@ -107,19 +112,18 @@
                             <p></p>
                             <input type="text" class="formcontrol" id="endpoint" placeholder="Date or city">
                         </li>
-                    </article>
-                </ul>
+
+                    </ul>
+                </section>
                 <section id="submitbtn">
                     <input type="submit" id="submit" value="Save trip">
                 </section>
                 <section id="resetbtn">
-                <input type="reset" id="reset" value="Start over">
+                    <input type="reset" id="reset" value="Start over">
                 </section>
             </form>
         </article>
-        <article>
-            <img src="images/Marblehead-Lighthouse.jpeg" alt="family on the shore, lighthouse in the background" class="mytrippic">
-        </article>
+
     </main>
     <footer class="c-manage-footer">
         <nav>

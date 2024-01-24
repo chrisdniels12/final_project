@@ -385,14 +385,16 @@ section a:active {
 
     main {
         padding: 2.5rem .5rem;
-        max-width: 1200px;
+        
     }
-
     .n-formmain {
-        display: grid;
         background: url(../images/traveldoodle.png) 0 90px/auto repeat-x;
+    }
+    .formgroup {
+        display: grid;
         grid-template-areas:
-            "button1 . button2"
+            "content1 img1 content2"
+            "content1 img1 content2"
             "content1 img1 content2";
     }
 
@@ -410,15 +412,24 @@ section a:active {
         border: solid 1px black;
         border-radius: 50% 50%;
         width: 300px;
+        
+    }
+    #trippic {
         grid-area: img1;
     }
 
     #submitbtn {
-        grid-area: button1;
+        position:absolute;
+        top: 30rem;
+        left: 15rem;
+        
     }
 
     #resetbtn {
-        grid-area: button2;
+        position: absolute;
+        top: 30rem;
+       right: 5rem;
+       
     }
 
     .alpha {
