@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>About Us</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://kit.fontawesome.com/5894beddfb.js" crossorigin="anonymous"></script>
+</head>
+
+<style>
+    .about-hero {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, .4);
+        background-image: url(../images/about-header.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 300px;
+        box-shadow: 2px 2px rgba(0, 0, 0, 20%);
+        margin-bottom: 1rem;
+    }
+    
+
+/*
+    @media screen and (min-width: 550px) {
+        .flex-about {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .send-tips h2 {
+            border-top: none;
+        }
+    }
+*/
+
+</style>
+
+<body>
+    <main>
+        <header class=c-header>
+            <img class="logo" src="../images/small-logo.png" alt="logo">
+            <input type="checkbox" class="nt" id="nt">
+            <nav class="c-header-nav">
+                <ul>
+                    <li><a href="#"> Home</a></li>
+                    <li><a href="#"> Explore</a></li>
+                    <li><a href="#"> Plan</a></li>
+                    <li><a href="#"> Share</a></li>
+                    <li><a href="#"> About us</a></li>
+                </ul>
+            </nav>
+            <label for="nt" class="ntMenu" name="nt">
+                <span class="material-symbols-outlined mi menuOpen">menu</span>
+                <span class="material-symbols-outlined mi menuClose" id="menuClose">close</span>
+            </label>
+            <input type="search">
+        </header>
+
+        <!--    hero with page title -->
+        <hero class="about-hero">
+            <h1>About Roadside America</h1>
+        </hero>
+
+        <!--    flex section -->
+        <section class="flex-about">
+        <article class="about-article">
+            <p>RoadsideAmerica.com is a caramel-coated-nutbag-full of odd and hilarious travel destinations -- over 15,000 places in the U.S.A. and Canada -- ready for exploration.</p>
+            <p>Road trip know-it-alls Doug Kirby, Ken Smith, Mike Wilkins introduced readers to the world of offbeat tourist attractions with their books, Roadside America and New Roadside America (Jack Barth was a co-author of the first RA book). The three writers continued to document and photograph their backroad discoveries. On the web since 1994 (RoadsideAmerica.com launched in 1996), and with a companion iPhone application since 2010, they're accompanied online by a horde of tipsters shoving little pushpins of peculiarity into the landscape. You'll also find the Roadside guys on Facebook and Twitter, curating the latest offbeat attraction news and discoveries.</p>
+        </article>
+        <article class="send-tips">
+            <h2>Send Your Tips</h2>
+            <p>You can submit tips and directions for new sights, and updates on the classic attractions.</p>
+            <ul>
+                <li><a href=#>Tip Submission Guidelines</a></li>
+                <li><a href="#">Submit a Tip</a></li>
+            </ul>
+        </article>
+        </section>
+    </main>
+
+
+
+    <footer class="c-manage-footer">
+        <nav>
+            <ul>
+                <li><a href="#"> Home</a></li>
+                <li><a href="#"> About us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul>
+                <li><a href="#"><i class="fa-brands fa-square-x-twitter fa-2x"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a></li>
+                <li><a href="#"> <i class="fa-brands fa-square-facebook fa-2x"></i></a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2024 Roadside America</p>
+    </footer>
+</body>
+
+</html>
