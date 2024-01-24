@@ -125,7 +125,7 @@ body {
     text-shadow: 2px 2px 4px rgba(255, 0, 0, .7);
     margin: 1rem auto;
 }
-
+/* My Trip page styles */
 .triptype {
     display: flex;
     flex-direction: column;
@@ -165,7 +165,6 @@ body {
     color: transparent;
     display: inline-block;
     transition: color 0.3s;
-    /* Transition for color change */
 }
 
 .check.clicked::before {
@@ -213,14 +212,8 @@ input {
     margin: auto 1rem;
 }
 
-footer {
-    display: block;
-    background-color: darkgray;
-    padding: 1rem;
-    height: 7rem;
-    text-align: center;
-}
 
+/* Themed Trips page styles */
 .alpha {
     display: flex;
     flex-direction: row;
@@ -291,6 +284,7 @@ section a:active {
     margin-top: 2rem;
 }
 
+/* Plan page styles */
 #h2 {
     text-align: center;
     font-size: 2rem;
@@ -341,7 +335,7 @@ section a:active {
     line-height: 2;
     text-align: center;
 }
-
+/* Media queries */
 @media screen and (min-width:720px) {
     #logo {
         display: inline-block;
