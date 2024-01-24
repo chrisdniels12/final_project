@@ -71,6 +71,11 @@ margin: 20px auto;
 display: flex;
 gap: 20px;
 }
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+
 /*****************************
 ******************************                 
 1. Project deatils & color and typography guidelines
