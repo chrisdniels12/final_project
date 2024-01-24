@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Roadside America Share</title>
+        <link href="../css/reset.css" rel="stylesheet" type="text/css">
+        <link href="../css/main.css" rel="stylesheet" type="text/css">
+<!--        font awsome-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        
+<!--        google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=PT+Sans+Caption&display=swap" rel="stylesheet">
+        
+<!--        jquery-->
+        <script src="https://kit.fontawesome.com/5894beddfb.js" crossorigin="anonymous"></script>
+        <style>
+            
+          .material-symbols-outlined {
+              font-variation-settings:
+              'FILL' 0,
+              'wght' 900,
+              'GRAD' 0,
+              'opsz' 24
+            }
+            
+            .icon { 
+              font-variation-settings:
+              'FILL' 0,
+              'wght' 400,
+              'GRAD' 0,
+              'opsz' 24
+            }
+
+    
+
+/* --------------------------- global --------------------------------------*/
+            body {
+                background-color: #c5d6e2;
+                font-family: "Montserrat", sans-serif;
+                font-size: 10px;
+                text-align: center;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+                color: #fff;
+                text-shadow: 3px 3px 3px rgba(0,0,0,.5);
+                font-weight: 700;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+                padding: 1.3rem;
+                text-shadow: 2px 2px 2px #f7081f;
+                margin-top: 1rem;
+            }
+            
+            h3 {
+                font-size: 1.3rem;
+                color: #8a79cc;
+            }
+        
+            p {
+                font-size: 1.3rem;
+                padding-bottom: 1rem;
+            }
+            
+            a {
+                font-size: 1.3rem;
+                text-decoration: none;
+                color: #000;
+            }
+            
+            a:hover {
+                color: #8a79cc;
+            }
+            
+            .large {
+                display: none;
+            }
+/* ----------------------------- header ------------------------------*/
+            img:not(.logo) {
+                max-width: 100%;
+                height: auto;
+            }
+            
+            .c-header {
+                display: flex;
+                position: relative;
+                z-index: 100;
+                width: 100%;
+                background: #F7F6ED;
+            }
+
+            .c-header > * {
+                padding: 10px;
+            }
+             .c-header img {
+                margin: 0 auto;
+                width: 20%;
+            }
+            
+            .c-header-nav {
+                position: absolute;
+                top:100%;
+                width: 100%;
+                display: none;
+                background: #F7F6ED;
+            }
+
+
+            .c-header-nav li {
+                padding: 1rem;
+            }
+            
+            .c-header-nav li a {
+                display: block;
+                text-align: center;
+            }
+            
+            li.get-app {
+                display: none;
+            }
+            
+            .nt:checked ~ nav {display: block;}
+            .nt {
+                display: none;
+            }
+            #menuClose {display: none;}
+            .nt:checked ~ .ntMenu #menuClose {
+                display: block;
+            }
+            .nt:checked ~ .ntMenu #menuClose {
+                display: block;
+            }
+            .nt:checked ~ .ntMenu .menuOpen {
+                display: none;
+            }
+                  
+/* ----------------------------- main ---------------------------------------*/
+            main {
+                width: 90%;
+                margin: auto;
+            }
+/*------------------share---------------------*/ 
+            section.wrapper-share {
+                margin: 2rem auto;
+                width: 500px;
+                height: 500px;
+                border-radius: 50%;
+                background-image: url(../images/share.jpg);
+                background-position: 40% 20%;
+                
+            }
+/*------------------form---------------------*/ 
+            fieldset {
+                width: 80%;
+                margin: auto;
+            }
+            input {
+                width: 80%;
+                padding: .5rem;
+                margin: .5rem;
+                text-align: center;
+                font-size: 1.2rem;
+            }
+            
+            textarea {
+                width: 80%;
+                padding: 1.7rem .5rem;
+                font-size: 1.2rem;
+                font-family: "Montserrat", sans-serif;
+            }
+           
+            input#submit {
+                width: 50%;
+                background-color: #f7931e;
+                border-radius: 10px;
+                border: none;
+                color: #808080;
+                font-size: 1.7rem;
+            }
+            
+            div.only-large {
+                display: none;
+            }
+
+/*------------------review---------------------*/ 
+            
+            section.review h1 {
+                background-image: url(../images/share_pencil_small.png);
+                background-repeat: no-repeat;
+                background-position: 50% 65%;
+                padding: 3rem;
+            }
+            
+           
+            div.input-search {
+                width: 90%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #fff;
+                border: solid 1px #000;
+                border-radius: 10px;
+                margin: 1rem;
+                padding: .2rem;
+            }
+            
+            section.review input {
+                border: none;
+                font-size: 1.3rem;
+                 padding: 0;
+            }
+            
+            span.search {
+                color: #808080;
+                font-size: 2rem;
+            }
+            
+            section.review-wrapper {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+                margin: auto;
+            }
+            
+            article.review-name {
+                background-color: #f7f6ed;
+                border: solid 1px #000;
+                border-radius: 10px;
+                padding: 1rem;
+                width: 100%;
+                height: 100%;
+            }
+            
+            article.largescreen {
+                display: none;
+            }
+            
+            article.review-name a {
+                color: #808080;
+                font-size: 1rem;
+            }
+            
+            article.review-name a:hover {
+                color: #8a79cc;
+            }
+            
+            div.review-wrapper-2 {
+                display: flex;
+                gap: .5rem;
+            }
+            
+            div.share-wrapper-3 {
+                margin: auto;
+            }
+            p.smallpurple {
+                color: #8a79cc;
+                font-size: .8rem;
+            }
+            
+            p.boldsentence {
+                font-size: 1rem;
+                width: 80%;
+                line-height: 1.2;
+                margin: auto;
+            }
+            
+            p.viewmore {
+                margin-top: 1rem;
+            }
+/* ----------------------------- blog ---------------------------------------*/
+            section.topics {
+                margin: 4rem;
+            }
+            
+            article.topics-wrapper {
+                background-color: #f7f6ed;
+                border: solid 2px #000;
+                border-radius: 10px;
+                padding: 1rem;
+                margin-bottom: 2rem;
+            }
+            
+            article.topics-wrapper h1{
+                color: #f7931e;
+                margin-bottom: 1rem;
+            }
+            
+            article.topics-wrapper a{
+                margin-top: 1.3rem;
+                color: #808080;
+            }
+            
+            article.topics-wrapper a:hover{
+                color: #8a79cc;
+            }
+/* ----------------------------- footer ---------------------------------------*/
+            footer {
+                background-color: #b5b4b4;
+                padding: 1rem;
+            }
+            
+            .c-manage-footer nav, .c-manage-footer p{
+                display: flex;
+                justify-content: center;
+                margin: 20px auto;
+            }
+            .c-manage-footer nav ul {
+                display: flex;
+                gap: 20px;
+            }
+            
+/* ----------------------------- media ---------------------------------------*/
+/*----------------------------------medium---------------------*/
+             @media screen and (min-width: 750px) {
+/*------------------header---------------------*/ 
+                     .ntMenu {
+                    display: none;
+                }
+                .c-header-nav {
+                    all:unset;
+                    display: flex;
+                }
+                .c-header-nav ul {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+            
+/*----------------------------------large---------------------*/
+
+                @media screen and (min-width: 1000px) {
+                    
+                .small {
+                    display: none;
+                }
+                
+                .large {
+                    display: block;
+                }
+            
+/*------------------share---------------------*/ 
+                section.wrapper-for-img{
+                    display: grid;
+                    grid-template-columns: 3fr 1.2fr;
+                        
+                }
+                    
+                section.wrapper-share {
+                width: 80%;
+                background-image: none;
+                background-color: #fff;
+                border-radius: 15px;
+                margin-left: 3rem;
+                margin-right: 0;
+                position: relative;
+                }
+                    
+                div.input-search {
+                width: 60%;
+                margin: 1rem auto;
+                }
+                
+                div.only-large {
+                display: block;
+                margin: auto;
+                }
+                    
+                div.only-large img{
+                    border-radius: 50%;
+                    width: 100%;
+                }
+/*------------------review---------------------*/ 
+                section.review-wrapper {
+                grid-template-columns: 1fr 1fr 1fr;
+                      
+                }
+                    
+                 article.largescreen {
+                display: block;
+                }
+            
+/*------------------blog---------------------*/ 
+                    section.topics {
+                        display: flex;
+                        gap: 2rem;
+                        margin: 3rem auto;
+                }
+                    article.topics-wrapper {
+                        padding: 1rem 2rem;
+                }
+                    h1.sightoftheweek{
+                        font-size: 2rem;
+                }
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        <header class=c-header>
+            <img class="logo small" src="../images/logo_small.png" alt="logo">
+            <img class="logo large" src="../images/logo_large.png" alt="logo">
+            <input type="checkbox" class="nt" id="nt">
+            <nav class="c-header-nav">
+                <ul>
+                    <li><a href="../index.html"> Home</a></li>
+                    <li><a href="explore.html"> Explore</a></li>
+                    <li><a href=""> Plan</a></li>
+                    <li><a href="share.html"> Share</a></li>
+                    <li><a href=""> About us</a></li>
+                </ul>
+            </nav>
+            <label for="nt" class="ntMenu" name="nt">
+                <span class="material-symbols-outlined mi menuOpen">menu</span>
+                <span class="material-symbols-outlined mi menuClose" id="menuClose">close</span>
+            </label>
+        </header>
+        
+        <main> 
+         <section class="wrapper-for-img">
+          <section class="wrapper-share">
+             <h2>Share your experience!</h2>
+             <fieldset>
+                <ul>
+                    <li>
+                      <input type="text" id="name" name="name" placeholder="Name" value="" required></li>
+                    <li>
+                      <input type="text" id="adress" name="adress" placeholder="Email adress" value ="" required></li>
+                    <li>
+                      <input type="text" id="place" name="place" placeholder="Place you visited" value="" required></li>
+                    <li>
+                      <textarea name="message" id="message" placeholder="Write your experience!" value="" required></textarea>
+                 </ul>
+             </fieldset>
+             <input type="submit" id="submit" value="Submit">
+            </section>
+            <div class="only-large">
+                <img class="large" src="../images/share_large.jpg" alt="people looking at sunset" >
+            </div>
+          </section>
+                
+            <section class="review">
+                <h1>Reviews</h1>
+                <div class="input-search">
+                    <span class="material-symbols-outlined icon search">search</span>
+                    <input type="text" placeholder="Search state or city">
+                </div>
+                <section class="review-wrapper">
+                    <article class="review-name">
+                        <div class="review-wrapper-2 name-date">
+                            <span class="material-symbols-outlined icon">account_circle</span>
+                            <div class="share-wrapper-3">
+                                <h3>John Smith</h3>
+                                <p class="smallpurple">2 days ago</p>
+                            </div>
+                        </div>
+                        <p class="boldsentence">RoadsideAmerica.com guided me to the
+                        mesmerizing Foamhenge,</p>
+                        <a href="#">read more...</a>
+                    </article>
+                    
+                    <article class="review-name">
+                        <div class="review-wrapper-2 name-date">
+                            <span class="material-symbols-outlined icon">account_circle</span>
+                            <div class="share-wrapper-3">
+                                <h3>Rose Salo</h3>
+                                <p class="smallpurple">4 days ago</p>
+                            </div>
+                        </div>
+                        <p class="boldsentence">Exploring the Museum of Bad Art, recommended by RoadsideAmerica.com</p>
+                        <a href="#">read more...</a>
+                    </article>
+                    
+                    <article class="review-name">
+                        <div class="review-wrapper-2 name-date">
+                            <span class="material-symbols-outlined icon">account_circle</span>
+                            <div class="share-wrapper-3">
+                                <h3>Kayllin Downing</h3>
+                                <p class="smallpurple">5 week ago</p>
+                            </div>
+                        </div>
+                        <p class="boldsentence">Thanks to RoadsideAmerica.com, I stumbled upon the captivating</p>
+                        <a href="#">read more...</a>
+                    </article>
+                    <article class="review-name">
+                        <div class="review-wrapper-2 name-date">
+                            <span class="material-symbols-outlined icon">account_circle</span>
+                            <div class="share-wrapper-3">
+                                <h3>Alyssa Sheldon</h3>
+                                <p class="smallpurple">1 week ago</p>
+                            </div>
+                        </div>
+                        <p class="boldsentence">Following RoadsideAmerica.com's suggestion, I visited the
+                        Enchanted Highway</p>
+                        <a href="#">read more...</a>
+                    </article>
+                    <article class="review-name">
+                        <div class="review-wrapper-2 name-date">
+                            <span class="material-symbols-outlined icon">account_circle</span>
+                            <div class="share-wrapper-3">
+                                <h3>James Phillips</h3>
+                                <p class="smallpurple">1 week ago</p>
+                            </div>
+                        </div>
+                        <p class="boldsentence">RoadsideAmerica.com introduced me to the surreal House on the Rock,</p>
+                        <a href="#">read more...</a>
+                    </article>
+                    
+                    <article class="review-name">
+                        <div class="review-wrapper-2 name-date">
+                            <span class="material-symbols-outlined icon">account_circle</span>
+                            <div class="share-wrapper-3">
+                                <h3>Jessica Prozor</h3>
+                                <p class="smallpurple">1 week ago</p>
+                            </div>
+                        </div>
+                        <p class="boldsentence">The quirky recommendation from RoadsideAmerica.com took me to the Dog Bark Park Inn,</p>
+                        <a href="#">read more...</a>
+                    </article>
+                    
+                    <article class="review-name">
+                        <div class="review-wrapper-2 name-date">
+                            <span class="material-symbols-outlined icon">account_circle</span>
+                            <div class="share-wrapper-3">
+                                <h3>Chirstina Frey</h3>
+                                <p class="smallpurple">1 week ago</p>
+                            </div>
+                        </div>
+                        <p class="boldsentence">Exploring the Winchester Mystery House, as recommended by</p>
+                        <a href="#">read more...</a>
+                    </article>
+                    
+                    <article class="review-name">
+                        <div class="review-wrapper-2 name-date">
+                            <span class="material-symbols-outlined icon">account_circle</span>
+                            <div class="share-wrapper-3">
+                                <h3>Kyle Spinola</h3>
+                                <p class="smallpurple">2 week ago</p>
+                            </div>
+                        </div>
+                        <p class="boldsentence">RoadsideAmerica.com's suggestion of the Cadillac Ranch led me to</p>
+                        <a href="#">read more...</a>
+                    </article>
+                    
+                    <article class="review-name largescreen">
+                        <div class="review-wrapper-2 name-date">
+                            <span class="material-symbols-outlined icon">account_circle</span>
+                            <div class="share-wrapper-3">
+                                <h3>Karl Hird</h3>
+                                <p class="smallpurple">2 week ago</p>
+                            </div>
+                        </div>
+                        <p class="boldsentence">Following RoadsideAmerica.com's advice, I visited theawe-inspiring Biosphere 2,</p>
+                        <a href="#">read more...</a>
+                    </article>
+                    
+                </section>
+                <a href="#"><p class="viewmore">View more<span class="material-symbols-outlined icon">expand_circle_down</span></p></a>
+            </section>
+            
+            <section class="topics">
+                <article class="topics-wrapper">
+                    <h1>Blog</h1>
+                    <p>Road trip news, rants, and ruminations by the Editors of Roadside America.com</p>
+                    <img src="../images/blog_small.jpg" alt="wide road">
+                    <a href="blog.html"><p>Click here to view more<span class="material-symbols-outlined icon">double_arrow</span></p></a>
+                </article>
+                
+                <article class="topics-wrapper">
+                    <h1 class="sightoftheweek">Sight of the Week</h1>
+                    <p>Road trip news, rants, and ruminations by the Editors of Roadside America.com</p>
+                    <img src="../images/sightoftheweek_small.jpg" alt="local fair">
+                    <a href="#"><p>Click here to view more<span class="material-symbols-outlined icon">double_arrow</span></p></a>
+                </article>
+            </section>
+        </main>
+        
+        <footer class="c-manage-footer">
+            <nav>
+                <ul>
+                    <li><a href="../index.html"> Home</a></li>
+                    <li><a href="#"> About us</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-square-x-twitter fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-square-facebook fa-2x"></i></a></li>
+                </ul>
+            </nav>
+            <p>&copy; 2024 Roadside America</p>
+        </footer>
+    </body>
+</html>

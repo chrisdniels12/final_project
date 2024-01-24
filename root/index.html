@@ -1,10 +1,550 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
     
-</body>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Roadside America Homepage</title>
+        
+        <link href="css/reset.css" rel="stylesheet" type="text/css">
+        <link href="css/main.css" rel="stylesheet" type="text/css">
+        
+        <!--        font awsome-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        
+        <!--        google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=PT+Sans+Caption&display=swap" rel="stylesheet">
+        
+        <script src="https://kit.fontawesome.com/5894beddfb.js" crossorigin="anonymous"></script>
+        <style>
+            
+          .material-symbols-outlined {
+              font-variation-settings:
+              'FILL' 0,
+              'wght' 900,
+              'GRAD' 0,
+              'opsz' 24
+            }
+            
+            .icon { 
+              font-variation-settings:
+              'FILL' 0,
+              'wght' 400,
+              'GRAD' 0,
+              'opsz' 24
+            }
+
+
+/* --------------------------- global --------------------------------------*/
+            body {
+                background-color: #f7f6ed;
+                font-family: "Montserrat", sans-serif;
+                font-size: 10px;
+                text-align: center;
+            }
+            
+            h1 {
+                font-size: 2.8rem;
+                font-family: "PT Sans Caption", sans-serif;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+                padding: 1.3rem;
+                text-shadow: 1px 1px 2px #f7081f;
+                border-top: solid 1.5px #000;
+                margin-top: 1rem;
+            }
+            
+        
+            p {
+                font-size: 1.3rem;
+                padding-bottom: 1rem;
+            }
+            
+            a {
+                font-size: 1.3rem;
+                text-decoration: none;
+                color: #000;
+            }
+            
+            a:hover {
+                color: #8a79cc;
+            }
+            
+            .large {
+                display: none;
+            }
+/* ----------------------------- header ------------------------------*/
+
+            
+            img:not(.logo) {
+                max-width: 100%;
+                height: auto;
+            }
+            
+            .c-header {
+                display: flex;
+                position: relative;
+                z-index: 100;
+                width: 100%;
+            }
+
+            .c-header > * {
+                padding: 10px;
+            }
+             .c-header img {
+                margin: 0 auto;
+                width: 20%;
+            }
+            
+            .c-header-nav {
+                position: absolute;
+                top:100%;
+                width: 100%;
+                display: none;
+                background: #F7F6ED;
+            }
+
+
+            .c-header-nav li {
+                padding: 1rem;
+            }
+            
+
+
+            .c-header-nav li a {
+                display: block;
+                text-align: center;
+            }
+            
+            li.get-app {
+                display: none;
+            }
+            
+            .nt:checked ~ nav {display: block;}
+            .nt {
+                display: none;
+            }
+            #menuClose {display: none;}
+            .nt:checked ~ .ntMenu #menuClose {
+                display: block;
+            }
+            .nt:checked ~ .ntMenu #menuClose {
+                display: block;
+            }
+            .nt:checked ~ .ntMenu .menuOpen {
+                display: none;
+            }
+           
+            
+/*---------------------------------section.hero---------------------------------*/
+            
+            section.hero {
+                position: relative;
+                width: 100%;
+                text-align: center;
+            }
+            
+            section.hero img {
+                width: 100%;
+            }
+            
+            section.hero h1 {
+                color: #fff;
+                text-shadow: 1px 1px 2px rgba(0,0,0,.4);
+                width: 80%;
+                position: absolute;
+                top: 30%;
+                left: 10%;
+                text-align: center;
+            }
+            
+ /* ----------------------------- main ---------------------------------------*/
+            main {
+                width: 80%;
+                margin: auto;
+                padding: 3rem 0;
+            }
+/*--------------section.idea-search---------------*/
+
+            section.idea-search p {
+                font-size: 1.5rem;
+            }
+            
+            div.input-search {
+                width: 90%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #fff;
+                border: solid 1px #000;
+                border-radius: 10px;
+                margin: 1rem;
+                padding: .2rem;
+            }
+            
+             section.idea-search input {
+                width: 100%;
+                border: none;
+                font-size: 1.3rem;
+                padding: 0;
+            }
+            
+            span.search {
+                color: #808080;
+                font-size: 2rem;
+            }
+            
+/*------------------category---------------------*/   
+            section.attractions h2 {
+                border-top: none;
+                margin-top: 0;
+            }
+            
+            article.category {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1.5rem;
+                position: relative;
+            }
+            
+            article.category figure {
+                border: solid 1px #000;
+                margin-right: .5rem;
+            }
+            
+            article.category figcaption {
+                background-color: #fff;
+                padding: 1rem;
+            }
+
+            p.viewmore {
+                color: #808080;
+                margin: 1rem auto 0;
+            }  
+
+/*--------------sight of the week---------------*/  
+            article.site-week ul{
+                text-align: left;
+            }
+            
+            article.site-week li{
+                border-bottom: solid 1px #808080;
+                margin-bottom: .5rem;
+            }
+            
+             article.site-week li:last-child{
+                border-bottom: none;
+            }
+            
+            article.site-week p {
+                padding: .2rem 0;
+            }
+            article.site-week p:nth-child(odd){
+                color: #8a79cc;
+            }
+            
+             article.site-week p:nth-child(even){
+                color: #808080;
+                font-size: .8rem;
+            }
+            
+            article.site-week p.viewmore {
+                color: #808080;
+            }
+/*--------------app download---------------*/  
+            aside h2 {
+                text-shadow: none;
+                font-size: 2rem;
+            }
+            
+            section.download-btn {
+                display: flex;
+                gap: 2rem;
+            }
+            
+/* ----------------------------- footer ---------------------------------------*/
+            footer {
+                background-color: #b5b4b4;
+                padding: 1rem;
+            }
+            
+            .c-manage-footer nav, .c-manage-footer p{
+                display: flex;
+                justify-content: center;
+                margin: 20px auto;
+            }
+            .c-manage-footer nav ul {
+                display: flex;
+                gap: 20px;
+            }
+            
+/* ----------------------------- media ---------------------------------------*/
+            @media screen and (min-width: 800px) {
+                .small {
+                    display: none;
+                }
+                
+                .large {
+                    display: block;
+                }
+                
+/*------------------header---------------------*/ 
+                .ntMenu {
+                    display: none;
+                }
+                .c-header-nav {
+                    all:unset;
+                    display: flex;
+                }
+                .c-header-nav ul {
+                    display: flex;
+                    align-items: center;
+                }
+                   
+
+/*------------------category---------------------*/  
+                article.category {
+                    display: flex;
+                    
+                }
+                
+/*--------jQuery--------*/
+                article.category img {
+                    height: auto;
+                    width: 100%;
+                }
+                
+                .slide-arrow {
+                      background-color:  #f7f6ed;
+                      bottom: 0;
+                      height: 0;
+                      margin: auto;
+                      position: absolute;
+                      top: 0;
+                      width: 0;
+                    }
+                    .prev-arrow {
+                      border-bottom: 20px solid #f7f6ed;
+                      border-left: 0;
+                      border-right: 20px solid #808080;
+                      border-top: 20px solid #f7f6ed;
+                      left: -30px;
+                    }
+                    .next-arrow {
+                      border-bottom: 20px solid   #f7f6ed;
+                      border-left: 20px solid #808080;
+                      border-right: 0;
+                      border-top: 20px solid   #f7f6ed;
+                      right: -25px;
+                    }
+                    button {
+                      -webkit-appearance: none;
+                      -moz-appearance: none;
+                      appearance: none;
+                      outline: none;
+                      padding: 0;
+                    }
+               
+/*------------------articel, aside---------------------*/ 
+                section.wrapper {
+                    display: flex;
+                    gap: 0;
+                }
+                
+                article.site-week {
+                    background-color: rgba(255,255,255,.8);
+                    margin-top: 2rem;
+                    padding: 0 1.5rem 1rem;
+                }
+                article.site-week h2 {
+                    border-top: none;
+                }
+                
+                aside h2 {
+                    display: none;
+                }
+                aside img.large {
+                    padding-top: 3.5rem;
+                    width: 60%;
+                    margin: auto;
+                }
+                
+            }
+                
+            
+        </style>
+        
+        
+        
+        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="css/slick-theme.css">
+    </head>
+
+    <body>
+       <header class=c-header>
+            <img class="logo small" src="images/logo_small.png" alt="logo">
+            <img class="logo large" src="images/logo_large.png" alt="logo">
+            <input type="checkbox" class="nt" id="nt">
+            <nav class="c-header-nav">
+                <ul>
+                    <li><a href="index.html"> Home</a></li>
+                    <li><a href="pages/explore.html"> Explore</a></li>
+                    <li><a href="pages/"> Plan</a></li>
+                    <li><a href="pages/share.html"> Share</a></li>
+                    <li><a href="pages/"> About us</a></li>
+                </ul>
+            </nav>
+            <label for="nt" class="ntMenu" name="nt">
+                <span class="material-symbols-outlined mi menuOpen">menu</span>
+                <span class="material-symbols-outlined mi menuClose" id="menuClose">close</span>
+            </label>
+        </header>
+            <section class="hero">
+                
+                    <img src="images/cover_small.jpg" alt="cover photo" srcset="images/cover_small.jpg 350w, images/cover_large.jpg 800w">
+                
+                <h1>Find Unique Attractions for your next trip</h1>
+            </section>
+            
+            <main class="home-page">
+               
+                <section class="idea-search">
+                    <p>Bored with typical vacations? We have some ideas!</p>
+                    <div class="input-search">
+                        <span class="material-symbols-outlined icon search">search</span>
+                        <input type="text" placeholder="Search state or city">
+                    </div>
+                </section>
+
+                <section class="attractions">
+                    <h2>Find attractions by categories</h2>
+                    
+<!-----------------jQuery----------------------->
+                    <article class="category">
+                        <figure>
+                            <img src="images/beach_small.jpg" alt="beach with blue sky" srcset="images/beach_small.jpg 350w,images/beach_large.jpg 800w">
+                            <figcaption><a href="#">Beach</a></figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/mountains_small.jpg" alt="mountains" srcset="images/mountains_small.jpg 350w, images/mountains_large.jpg 800w">
+                            <figcaption><a href="#">Mountains</a></figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/roadtrip_small.jpg" alt="car in the road" srcset="images/roadtrip_small.jpg 350w, images/roadtrip_large.jpg 800w">
+                            <figcaption><a href="#">Road Trip</a></figcaption>
+                        </figure>
+                        <figure>
+                            <img  src="images/event_small.jpg" alt="festival" srcset="images/event_small.jpg 350w, images/event_large.jpg 800w">
+                            <figcaption><a href="#">Event</a></figcaption>
+                        </figure>
+                        <figure>
+                            <img  src="images/history_small.jpg" alt="mount rushmore" srcset="images/history_small.jpg 350w, images/history_large.jpg 800w">
+                            
+                            <figcaption><a href="#">Historical</a></figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/nature_small.jpg" alt="flower filed" srcset="images/nature_small.jpg 350w, images/nature_large.jpg 800w">
+                            <figcaption><a href="#">Nature</a></figcaption>
+                        </figure>
+                    </article>
+                    <div class="small"><a href="#"><p class="viewmore">View more<span class="material-symbols-outlined icon">expand_circle_down</span></p></a></div>
+<!-----------------jQuery----------------------->
+                </section>
+                
+                <section class="wrapper">
+                    <article class="site-week">
+                        <h2>Sight of the Week</h2>
+                          <ul>
+                              <li>
+                                  <a href="#"><p>Memories of a Seventies Punk Rock Tourist</p></a>
+                                  <p>December 18, 2023</p>
+                              </li>
+                              <li>
+                                  <a href="#"><p>Is Taxidermy Dead?</p></a>
+                                  <p>October 28, 2023</p>
+                              </li>
+                              <li>
+                                  <a href="#"><p>Belated Burials: Expied, Unidentfied, and Famous!</p></a>
+                                  <p>October 4, 2023</p>
+                              </li>
+                              <li>
+                                  <a href="#"><p>Weed Museum for Atlantic city</p></a>
+                                  <p>April 29, 2023</p>
+                              </li>
+                              <li>
+                                  <a href="#"><p>wedding Bells for Cocaine Bear</p></a>
+                                  <p>March 18, 2023</p>
+                              </li>
+                          </ul>
+                          <a href="#"><p class="viewmore">View more<span class="material-symbols-outlined icon">expand_circle_down</span></p></a>
+                    </article>
+
+                    <aside class="app-download">
+                       <h2>Go further with our app!</h2>
+                        <section class="download-btn">
+                            <a href="#"><img class="small" src="images/download_apple.png" alt="apple download button"></a>
+                            <a href="#"><img class="small" src="images/download_google.png" alt="google download button"></a>
+                            <a href="#"><img class="large" src="images/download_large.png" alt="google download button"></a>
+                        </section>
+                    </aside>
+                </section>
+                
+        </main>
+        
+        <footer class="c-manage-footer">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-square-x-twitter fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-square-facebook fa-2x"></i></a></li>
+                </ul>
+            </nav>
+            <p>&copy; 2024 Roadside America</p>
+        </footer>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts/slick.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+    
+                
+                 $(".category").slick({
+                    infinite: true,
+                    prevArrow: '<button class="slide-arrow prev-arrow"></button>',
+                    nextArrow: '<button class="slide-arrow next-arrow"></button>',
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
+                     responsive: [
+                         {
+                    breakpoint: 884,
+                    settings: {
+				    slidesToShow: 3,
+				    slidesToScroll: 1,
+			              }
+                         },
+                         { 
+                             breakpoint: 799,
+                             settings: "unslick",
+                         }
+                     ]
+                   
+                  })
+              });
+        </script>
+    </body>
 </html>
+
+
+
