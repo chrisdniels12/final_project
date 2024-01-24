@@ -35,12 +35,28 @@
                 font-size: 2.8rem;
                 font-family: "PT Sans Caption", sans-serif;
             }
+
+h1.a-share-h1 {
+             font-size: 2.5rem;
+                color: #fff;
+                text-shadow: 3px 3px 3px rgba(0,0,0,.5);
+                font-weight: 700;
+                text-align: center;
+            
+}
+
+h1.a-blog-h1 { 
+                font-size: 2.5rem;
+                color: #fff;
+                text-shadow: 3px 3px 3px rgba(0,0,0,.5);
+                font-weight: 700;
+                margin: 2rem auto 1.5rem;
+            }
             
             h2 {
                 font-size: 1.5rem;
                 padding: 1.3rem;
                 text-shadow: 1px 1px 2px #f7081f;
-                border-top: solid 1.5px #000;
                 margin-top: 1rem;
             }
             /* blog h2*/
@@ -48,6 +64,7 @@
                 font-size: 1.3rem;
                 padding: 1.3rem 0 .5rem;
                 font-weight: 700;
+                text-align: center;
             }
 /* ayano share h2*/
 .a-share-h2 {
@@ -55,6 +72,7 @@
                 padding: 1.3rem;
                 text-shadow: 2px 2px 2px #f7081f;
                 margin-top: 1rem;
+                text-align: center;
             }
         
             p {
@@ -66,6 +84,7 @@
                 font-size: 1.3rem;
                 text-decoration: none;
                 color: #000;
+                text-align: center;
             }
             
             a:hover {
@@ -185,6 +204,7 @@
                 border-radius: 50%;
                 background-image: url(../images/share.jpg);
                 background-position: 40% 20%;
+                text-align: center;
                 
             }
 /*------------------form---------------------*/ 
@@ -214,6 +234,7 @@
                 border: none;
                 color: #808080;
                 font-size: 1.7rem;
+                margin-top
             }
             
             div.only-large {
