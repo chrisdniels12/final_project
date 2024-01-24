@@ -18,12 +18,14 @@ header {
     background-color: #F7F6ED;
     height: 9rem;
     width: 100%;
-    z-index: 100;
+    z-index: 99;
     margin: 0;
     padding: 0;
 
 }
-
+body {
+    background-color: #c5d6e2;
+}
 #logo {
     width: 7.5rem;
     height: auto;
@@ -106,8 +108,9 @@ body {
     -ms-user-select: none;
     user-select: none;
     position: relative;
-    top: -100px;
+    top: -10px;
     right: 8px;
+    z-index: 100;
 }
 
 
@@ -116,9 +119,7 @@ body {
 }
 
 
-body {
-    background-color: #c5d6e2;
-}
+
 
 .pgtitle {
     text-align: center;
@@ -309,6 +310,9 @@ section a:active {
     margin-top: 2rem;
 }
 /* plan page styles */
+#whitebg {
+    background-color: #fff;
+}
 #h2 {
     text-align: center;
     font-size: 2rem;
@@ -321,9 +325,6 @@ section a:active {
     width: 100%;
 }
 
-#bodyplan {
-    background-color: #fff;
-}
 
 .mainplan {
     margin: .5rem;
@@ -491,7 +492,7 @@ section a:active {
 }
 @media screen and (min-width:980px) {
         
-    #bodyplan main {
+    #bodyplan main{
         margin: auto 10%;
         max-width: 1161;
     }
