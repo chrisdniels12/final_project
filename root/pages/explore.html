@@ -144,9 +144,29 @@ textarea {
     margin-bottom: 1.5em;
 }
 
-
+@media screen and (min-width: 800px)
  
 @media screen and (max-width: 900px) {
+    /* header styles */
+.ntMenu {
+  display: none;
+}
+.c-header-nav {
+  all:unset;
+  display: flex;
+}
+.c-header-nav ul {
+  display: flex;
+  align-items: center;
+}
+input[type="search"] {
+  display: block;
+  margin-left:auto;
+  margin-right: 5px;
+  width: 50%;
+  align-self:center;
+}
+}
 section {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
