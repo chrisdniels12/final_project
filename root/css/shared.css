@@ -1,0 +1,475 @@
+/* <uniquifier>: Use a uniquifier for the class name
+<weight>: Use a value from 100 to 900 
+
+.montserrat-<uniquifier> {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+html {
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    font-size: 1rem;
+}
+
+header {
+    background-color: #F7F6ED;
+    height: 9rem;
+    width: 100%;
+    z-index: 100;
+    margin: 0;
+    padding: 0;
+
+}
+
+#logo {
+    width: 7.5rem;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding-top: .75rem;
+}
+
+
+.navburger {
+    background-color: #fff;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: block;
+    position: relative;
+}
+
+nav ul li ul {
+    display: none;
+    top: 100%;
+    left: 0;
+}
+
+nav ul li:hover > ul {
+    display: inline-block;
+}
+
+.navburger li {
+    margin: 0;
+    border-bottom: solid 1px #c5d6e2;
+}
+
+.navburger li a {
+    display: block;
+    padding: .5em;
+}
+
+#nav nav {
+    height: 0;
+    overflow: hidden;
+}
+
+
+body {
+    -webkit-animation: bugfix infinite 1s;
+
+}
+
+@-webkit-keyframes bugfix {
+    from {
+        padding: 0;
+    }
+
+    to {
+        padding: 0;
+    }
+}
+
+#nav input[type=checkbox] {
+    position: absolute;
+    top: -9999em;
+    left: -9999em;
+}
+
+#nav label {
+    display: block;
+    background: url(../images/menuicon.png)no-repeat right center;
+    text-indent: -9999em;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: relative;
+    top: -100px;
+    right: 8px;
+}
+
+
+#nav input[type=checkbox]:checked ~ nav {
+    height: auto;
+}
+
+
+body {
+    background-color: #c5d6e2;
+}
+
+.pgtitle {
+    text-align: center;
+    font-size: 4em;
+    text-transform: capitalize;
+    text-shadow: 2px 2px 4px rgba(255, 0, 0, .7);
+    margin: 1rem auto;
+}
+
+.triptype {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
+}
+
+.formsection {
+    display: none;
+}
+.check {
+    padding: 10px;
+    border: 2px solid #333;
+    cursor: pointer;
+    width: 45%;
+    background-color: #fff;
+    text-align: center;
+    margin-bottom: .5em;
+
+}
+
+.check:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.check.clicked {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.check::before {
+    content: '\2713';
+    /* Unicode check mark character */
+    font-size: 20px;
+    color: transparent;
+    display: inline-block;
+    transition: color 0.3s;
+    /* Transition for color change */
+}
+
+.check.clicked::before {
+    color: white;
+}
+
+.check:hover::before {
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 2rem;
+    margin: 50px 0;
+}
+
+label,
+input {
+    margin-bottom: 40px;
+}
+
+.formlabel {
+    background-color: #f7931e;
+    padding: 15px 85px;
+    color: black;
+    border-radius: 8px;
+    width: 45%;
+}
+
+.formcontrol {
+    padding: 10px;
+    border-radius: 8px;
+    margin: 3rem;
+    max-width: 50%;
+    text-align: center;
+}
+
+.mytrippic {
+    width: 95%;
+    height: auto;
+    margin: auto 1rem;
+}
+
+footer {
+    display: block;
+    background-color: darkgray;
+    padding: 1rem;
+    height: 7rem;
+    text-align: center;
+}
+
+.alpha {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: .5rem;
+    text-align: center;
+    margin: .5rem 0 .5rem .5rem;
+    font-size: 1.1rem;
+    background-color: #f7931e;
+    padding: 1em;
+
+}
+
+.alpha a {
+    color: black;
+    text-decoration: none;
+}
+
+.alpha a:hover {
+    text-decoration: underline;
+}
+
+.alphasections {
+    display: flex;
+}
+
+#jqalpha {
+    display: none;
+}
+
+section {
+    margin: 1rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    min-width: 341px;
+}
+
+section h2 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(255, 0, 0, .7);
+    line-height: 2;
+    margin: 1rem;
+    color: black;
+}
+
+section a:link {
+    color: #000;
+}
+
+section a:visited {
+    color: #000;
+}
+
+section a:active {
+    color: #f7931e;
+}
+
+.themed figure img {
+    display: block;
+    border: solid 2px #000;
+    margin: 10rem 1rem;
+    max-width: 100%;
+    height: auto;
+
+}
+
+.themed figure:nth-of-type(1) {
+    margin-top: 2rem;
+}
+
+#h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #f7931e;
+}
+
+#rtdoodle {
+    margin: 0;
+    width: 100%;
+}
+
+#bodyplan {
+    background-color: #fff;
+}
+
+.mainplan {
+    margin: .5rem;
+    padding: .2rem;
+    font-weight: 600;
+    line-height: 2;
+
+}
+
+.mainplan h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+
+}
+
+.mainplan ul li {
+    padding: 1rem;
+}
+
+.mainplan li a {
+    color: #f7931e;
+}
+
+.mainplan li a:active {
+    color: #c5d6e2;
+}
+
+.help {
+    font-weight: 500;
+    color: #8a79cc;
+    padding: .5rem;
+    font-size: 1.2rem;
+    line-height: 2;
+    text-align: center;
+}
+
+@media screen and (min-width:720px) {
+    #logo {
+        display: inline-block;
+        padding-top: 3rem;
+        width: 400px;
+    }
+
+    #nav {
+        padding: 0;
+    }
+
+    #nav label {
+        display: none;
+    }
+
+    #nav nav {
+        height: auto;
+    }
+
+    #nav ul {
+        margin-left: 40%;
+        padding: 0;
+    }
+
+    #nav li {
+        display: inline;
+        border: 0;
+    }
+
+    #nav a {
+        display: inline-block;
+    }
+
+    .pgtitle {
+        max-width: 100%;
+    }
+
+    .check {
+        max-width: 318px;
+    }
+
+    main {
+        padding: 2.5rem .5rem;
+        
+    }
+    .n-formmain {
+        background: url(../images/traveldoodle.png) 0 90px/auto repeat-x;
+    }
+    .formgroup {
+        display: grid;
+        grid-template-areas:
+            "content1 img1 content2"
+            "content1 img1 content2"
+            "content1 img1 content2";
+    }
+
+    #left {
+        grid-area: content1;
+    }
+
+    #right {
+        grid-area: content2;
+    }
+
+    .mytrippic {
+        display: block;
+        margin: 0 .5rem;
+        border: solid 1px black;
+        border-radius: 50% 50%;
+        width: 300px;
+        
+    }
+    #trippic {
+        grid-area: img1;
+    }
+
+    #submitbtn {
+        position:absolute;
+        top: 30rem;
+        left: 15rem;
+        
+    }
+
+    #resetbtn {
+        position: absolute;
+        top: 30rem;
+       right: 5rem;
+       
+    }
+
+    .alpha {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        margin: auto;
+
+    }
+
+    section a:hover {
+        color: #fff;
+    }
+
+    section a:active {
+        color: #f7931e;
+    }
+
+    .themed {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        margin: auto;
+        max-width: 100%;
+        height: auto;
+
+
+    }
+
+    .themed figure:nth-of-type(1) {
+        margin-top: 0;
+    }
+    .mainplan li a:hover {
+        color: #8a79cc;
+    }
+}
+@media screen and (min-width:980px) {
+        
+    #bodyplan main {
+        margin: auto 10%;
+        max-width: 1161;
+    }
+}
