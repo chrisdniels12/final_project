@@ -7,219 +7,11 @@
         <title>Explore America</title>
        
         <link rel="stylesheet" href="../css/reset.css">
-        <link rel="stylesheet" href="../css/stylesheet.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" >
         <link rel="stylesheet" href="../css/main.css">
-<style>
-    /* added */
-        html {font-size: 10px; }
-body {font-family: 'Open Sans', sans-serif;
-    font-size: 1.5em;
-    background-color: #c5d6e2;
-}
-h1 {margin-left: 10px;
-    margin-top: 7px;
-    margin-bottom: 10px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-    color: white;
-    font-size: 6rem; }
-    /* no h1 found */
-.al-explore-h2 {font-size: 3rem;
-padding-bottom: 7px;
-font-weight: bold;
-    color: black;
-}
-/* added */
-.al-explore-h3 {font-size: 2rem; margin-bottom: 5px; }
-h4 {color: #379F9F; 
-} 
-/* no h4 found */
-h5 {
-    font-weight: bold;
-    color: dimgray;
-}
-/*no h5 found  */
-p {margin: 0 0 1em;
-color: black;
-    font-size: 1em; }
-
-.explore::after {
-    content: " ";
-    display: block;
-    clear: both;
-}
-
-#center {
-    display: flex;
-  padding: 70px 10px;
-    line-height: 1.5em;
-  
-}
-header {
-    color: dimgray;
-    background-color: #f7f6ed;
-    text-align: center;
-    margin-top: 0;
-    padding: 1em 1em .5em;
-    margin-bottom: 30px;
-    width: 100%;
-    
-}
-
-.icon {
-        height: 25px;
-        width: 25px;
-        display: inline;
-        padding-right: 2px;
-}
-main {
-    width: 90%;
-    padding-left: 10%;
-    max-width: 1000px;
-    background-color: #c5d6e2;
-}
-
-
-
-.heromain::after {
-    content: " ";
-    display: block;
-    clear: both;
-}
-
-
-footer {
-    color: dimgray;
-    background-color: #f7f6ed;
-    text-align: center;
-    margin-top: 2em;
-    padding: 1em 1em .5em;
-    bottom: 0;
-    width: 100%;
-}
-
-
-section {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 2rem;
-        width: 100%;
-        margin: 0;
-    }
-
-section img {
-    max-width: 90%;
-    max-height: 400px;
-}
-
-
-.mufflermen img {
-        float: left;
-        width: 35%;
-        padding-right: 7px;
-        padding-bottom: 3px;
-        height: auto;
-    }
-
-
-hr{
-        height: 2px;
-        background-color: #f7f6ed;
-        border: none;
-    }
-
-
-
-
-select {
-    margin-bottom: 1.5em;
-}
-
-textarea {
-    width: 94%;
-    min-height: 60px;
-    padding: .4em;
-    margin-bottom: 1.5em;
-}
-
-
- 
-@media screen and (max-width: 900px) {
-section {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-        width: 100%;
-        margin: 0;
-    }
-    
-    main {
-    width: 95%;
-    padding-left: 2%;
-}
-    
-    #center {
-        display: flex;
-        justify-content: center;
-        padding-top: 7px;
-        padding-bottom: 7px;
-    }
-  
-   
-.mufflermen img {
-        width: 100%;
-    max-height: 300px;
-    padding-left: 10%;
-    padding-right: 10%
-    padding-bottom: 3px;
-        justify-content: center;
-    }
-
-}
-
- 
-@media screen and (max-width: 600px) {
-   
-     .mufflermen img {
-        width: 100%;
-        padding-right: 7px;
-        padding-bottom: 3px;
-         max-height: 300px;
-    }
-    h2 {
-        text-align: center;
-        font-size: 3rem;
-    }
-     h1 {
-        text-align: center;
-        font-size: 4rem;
-    }
-
-    section {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-        width: 100%;
-        margin: 0;
-    }
-    main {
-    width: 95%;
-  
-}
-    
-    #center {
-        display: flex;
-        justify-content: center;
-        padding-top: 7px;
-        padding-bottom: 7px;
-    }
-    
-
-}
-
-    
+        <link rel="stylesheet" href="../css/explore.css">
         
-        </style>
+
     </head>
     <body>
              <header class=c-header>
@@ -227,13 +19,17 @@ section {
         <input type="checkbox" class="nt" id="nt">
         <nav class="c-header-nav">
             <ul>
-                <li><a href="#"> Home</a></li>
+                <li><a href="../index.html"> Home</a></li>
                 <li><a href="#"> Explore</a></li>
-                <li><a href="#"> Plan</a></li>
-                <li><a href="#"> Share</a></li>
-                <li><a href="#"> About us</a></li>
+                <li><a href="plan.html"> Plan</a></li>
+                <li><a href="share.html"> Share</a></li>
+                <li><a href="about-us.html"> About us</a></li>
             </ul>
         </nav>
+        <label for="nt" class="ntMenu">
+            <span class="material-symbols-outlined mi menuOpen">menu</span>
+            <span class="material-symbols-outlined mi menuClose" id="menuClose">close</span>
+        </label>
 
 
         </header>
@@ -266,7 +62,7 @@ According to sculptor Richard Ellis, the first Muffler Man was made by Bobbie Le
            <img src="../images/map_usa.png" alt="usa map"></picture>
             <h3 class="al-explore-h3">Explore By Location</h3>
            <p class="al-explore-para">  Choose a location and let us show you where to go. The USA is a large nation filled with many adventures and exciting places!
-<a href="#">More></a>
+<a href="../pages/maps.html">More></a>
  </p>
         
         </article>
@@ -274,7 +70,7 @@ According to sculptor Richard Ellis, the first Muffler Man was made by Bobbie Le
           <article class="upcoming">
            <picture><source media="(min-width: 720px)" srcset="../images/events.jpg">
            <source media="(min-width: 0px)" srcset="../images/events.jpg"><img src="../images/events.jpg" alt="calendar">  </picture><h3 class="al-explore-h3">Upcoming Events</h3>
-          <p> Be in the know about exciting events occuring around the country. If you have the time and energy, these are must see! <a href="">More></a> </p>
+          <p> Be in the know about exciting events occuring around the country. If you have the time and energy, these are must see! <a href="../pages/calendar.html">More></a> </p>
         </article>
         
           <article class="waterTower">
@@ -286,13 +82,13 @@ According to sculptor Richard Ellis, the first Muffler Man was made by Bobbie Le
           <article class="themes">
            <picture><source media="(min-width: 720px)" srcset="../images/family.jpg">
            <source media="(min-width: 0px)" srcset="../images/family.jpg"><img src="../images/family.jpg" alt="Family">  </picture><h3 class="al-explore-h3">Themed Attractions</h3>
-          <p> We have all the best places. Build a lifetime of memories with the whole family with these themed attractions.  <a href="">More></a> </p>
+          <p> We have all the best places. Build a lifetime of memories with the whole family with these themed attractions.  <a href="../pages/plan.html">More></a> </p>
         </article>
         
           <article class="lists">
            <picture><source media="(min-width: 720px)" srcset="../images/lists.jpg">
            <source media="(min-width: 0px)" srcset="../images/lists.jpg"><img src="../images/lists.jpg" alt="lists">  </picture><h3 class="al-explore-h3">Lists, Endless Lists</h3>
-          <p> There are so many fun places to visit. Check out our lists that do not end.   <a href="">More></a> </p>
+          <p> There are so many fun places to visit. Check out our lists that do not end.   <a href="../pages/attractions.html">More></a> </p>
         </article>
                </section>        
 

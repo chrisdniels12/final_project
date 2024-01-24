@@ -60,6 +60,22 @@
     display: none;
     
     } 
+
+/* footer styles */
+.c-manage-footer nav, .c-manage-footer p{
+display: flex;
+justify-content: center;
+margin: 20px auto;
+}
+.c-manage-footer nav ul {
+display: flex;
+gap: 20px;
+}
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+
 /*****************************
 ******************************                 
 1. Project deatils & color and typography guidelines
