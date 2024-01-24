@@ -23,11 +23,6 @@
     --shadow: 0 0 6px rgba(0,0,0, .3);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 /* scope comments necessary for making variables that are not global, changed paragraph color in footer */
 footer p {
@@ -60,7 +55,7 @@ body {
 }
 
   
-    .heromap {
+.heromap {
     background: url(../images/map_usa.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -72,8 +67,9 @@ body {
     position: center;
     
 }
-br {
+.section1 {
     position: center;
+    padding-left: 20%;
 }
     
  
