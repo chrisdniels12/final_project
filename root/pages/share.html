@@ -6,7 +6,8 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Roadside America Share</title>
         <link href="../css/reset.css" rel="stylesheet" type="text/css">
-        <link href="../css/main.css" rel="stylesheet" type="text/css">
+        <!-- <link href="../css/main.css" rel="stylesheet" type="text/css"> -->
+        <link rel="stylesheet" href="../css/ayano.css">
 <!--        font awsome-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         
@@ -17,8 +18,8 @@
         
 <!--        jquery-->
         <script src="https://kit.fontawesome.com/5894beddfb.js" crossorigin="anonymous"></script>
-        <style>
-            
+        <!-- <style>
+            /* duplcates */
           .material-symbols-outlined {
               font-variation-settings:
               'FILL' 0,
@@ -35,7 +36,7 @@
               'opsz' 24
             }
 
-    
+    /* duplicates */
 
 /* --------------------------- global --------------------------------------*/
             body {
@@ -52,7 +53,8 @@
                 font-weight: 700;
             }
             
-            h2 {
+            /* added */
+            .a-share-h2 {
                 font-size: 1.8rem;
                 padding: 1.3rem;
                 text-shadow: 2px 2px 2px #f7081f;
@@ -140,9 +142,9 @@
             .nt:checked ~ .ntMenu .menuOpen {
                 display: none;
             }
-                  
+                  /* added */
 /* ----------------------------- main ---------------------------------------*/
-            main {
+            .a-share-main {
                 width: 90%;
                 margin: auto;
             }
@@ -332,7 +334,7 @@
                     align-items: center;
                 }
             }
-            
+            /* added */
 /*----------------------------------large---------------------*/
 
                 @media screen and (min-width: 1000px) {
@@ -400,10 +402,10 @@
                 }
             }
             
-        </style>
+        </style> -->
     </head>
 
-    <body>
+    <body class="a-blog-body">
         <header class=c-header>
             <img class="logo small" src="../images/logo_small.png" alt="logo">
             <img class="logo large" src="../images/logo_large.png" alt="logo">
@@ -423,10 +425,10 @@
             </label>
         </header>
         
-        <main> 
+        <main class="a-share-main"> 
          <section class="wrapper-for-img">
           <section class="wrapper-share">
-             <h2>Share your experience!</h2>
+             <h2 class="a-share-h2">Share your experience!</h2>
              <fieldset>
                 <ul>
                     <li>

@@ -8,7 +8,9 @@
        
         <link rel="stylesheet" href="../css/reset.css">
         <link rel="stylesheet" href="../css/stylesheet.css">
+        <link rel="stylesheet" href="">
 <style>
+    /* added */
         html {font-size: 10px; }
 body {font-family: 'Open Sans', sans-serif;
     font-size: 1.5em;
@@ -21,18 +23,22 @@ h1 {margin-left: 10px;
     font-weight: bold;
     color: white;
     font-size: 6rem; }
-h2 {font-size: 3rem;
+    /* no h1 found */
+.al-explore-h2 {font-size: 3rem;
 padding-bottom: 7px;
 font-weight: bold;
     color: black;
 }
-h3 {font-size: 2rem; margin-bottom: 5px; }
+/* added */
+.al-explore-h3 {font-size: 2rem; margin-bottom: 5px; }
 h4 {color: #379F9F; 
 } 
+/* no h4 found */
 h5 {
     font-weight: bold;
     color: dimgray;
 }
+/*no h5 found  */
 p {margin: 0 0 1em;
 color: black;
     font-size: 1em; }
@@ -233,7 +239,7 @@ section {
         </header>
         <main>
 
-           <h2>Attraction of the Month</h2>
+           <h2 class="al-explore-h2">Attraction of the Month</h2>
        <div class="heromain">
               <article class="mufflermen">
          <picture><source media="(min-width: 720px)" srcset="../images/mufflerMan.jpg">
@@ -251,15 +257,15 @@ According to sculptor Richard Ellis, the first Muffler Man was made by Bobbie Le
      </div>
    <hr>
        
-        <h2 class="explore">Find and Explore New Attractions</h2>
+        <h2 class="al-explore-h2 explore">Find and Explore New Attractions</h2>
         <section>
         
          <article class="maps">
           <picture><source media="(min-width: 720px)" srcset="../images/map_usa.png">
            <source media="(min-width: 0px)" srcset="../images/map_usa.png">
            <img src="../images/map_usa.png" alt="usa map"></picture>
-            <h3>Explore By Location</h3>
-           <p>  Choose a location and let us show you where to go. The USA is a large nation filled with many adventures and exciting places!
+            <h3 class="al-explore-h3">Explore By Location</h3>
+           <p class="al-explore-para">  Choose a location and let us show you where to go. The USA is a large nation filled with many adventures and exciting places!
 <a href="#">More></a>
  </p>
         
@@ -267,25 +273,25 @@ According to sculptor Richard Ellis, the first Muffler Man was made by Bobbie Le
         
           <article class="upcoming">
            <picture><source media="(min-width: 720px)" srcset="../images/events.jpg">
-           <source media="(min-width: 0px)" srcset="../images/events.jpg"><img src="../images/events.jpg" alt="calendar">  </picture><h3>Upcoming Events</h3>
+           <source media="(min-width: 0px)" srcset="../images/events.jpg"><img src="../images/events.jpg" alt="calendar">  </picture><h3 class="al-explore-h3">Upcoming Events</h3>
           <p> Be in the know about exciting events occuring around the country. If you have the time and energy, these are must see! <a href="">More></a> </p>
         </article>
         
           <article class="waterTower">
            <picture><source media="(min-width: 720px)" srcset="../images/waterTower.jpg">
-           <source media="(min-width: 0px)" srcset="../images/waterTower.jpg"> <img src="../images/waterTower.jpg" alt="water tower"> </picture><h3>Random Attraction</h3>
+           <source media="(min-width: 0px)" srcset="../images/waterTower.jpg"> <img src="../images/waterTower.jpg" alt="water tower"> </picture><h3 class="al-explore-h3">Random Attraction</h3>
            <p> America is a happy land. The Smiley Face Water Tower found in an unexpected number of American towns. <a href="">More></a> </p>
         </article>
          
           <article class="themes">
            <picture><source media="(min-width: 720px)" srcset="../images/family.jpg">
-           <source media="(min-width: 0px)" srcset="../images/family.jpg"><img src="../images/family.jpg" alt="Family">  </picture><h3>Themed Attractions</h3>
+           <source media="(min-width: 0px)" srcset="../images/family.jpg"><img src="../images/family.jpg" alt="Family">  </picture><h3 class="al-explore-h3">Themed Attractions</h3>
           <p> We have all the best places. Build a lifetime of memories with the whole family with these themed attractions.  <a href="">More></a> </p>
         </article>
         
           <article class="lists">
            <picture><source media="(min-width: 720px)" srcset="../images/lists.jpg">
-           <source media="(min-width: 0px)" srcset="../images/lists.jpg"><img src="../images/lists.jpg" alt="lists">  </picture><h3>Lists, Endless Lists</h3>
+           <source media="(min-width: 0px)" srcset="../images/lists.jpg"><img src="../images/lists.jpg" alt="lists">  </picture><h3 class="al-explore-h3">Lists, Endless Lists</h3>
           <p> There are so many fun places to visit. Check out our lists that do not end.   <a href="">More></a> </p>
         </article>
                </section>        
